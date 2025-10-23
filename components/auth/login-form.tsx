@@ -1,0 +1,126 @@
+"use client"
+
+import type React from "react"
+import { useRouter } from "next/navigation"
+import { signIn } from "@/lib/actions/auth"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Eye, EyeOff, Loader2 } from "lucide-react"
+import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
+
+export function LoginForm() {
+  const { t } = useLanguage()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [showPassword, setShowPassword] = useState(false)
+  const [rememberMe, setRememberMe] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const result = await signIn(email, password)
+
+      if (result.error) {
+        setError(result.error)
+      } else {
+        router.push("/dashboard")
+        router.refresh()
+      }
+    } catch (err: any) {
+      setError(t("login.error"))
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      {error && (
+        <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-3">
+          <p className="text-sm text-destructive">{error}</p>
+        </div>
+      )}
+
+      <div className="space-y-1.5">
+        <Label htmlFor="email" className="text-sm text-foreground">
+          {t("login.email")}
+        </Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="your@email.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="bg-background/50 border-border/50 focus:border-primary h-10"
+        />
+      </div>
+
+      <div className="space-y-1.5">
+        <Label htmlFor="password" className="text-sm text-foreground">
+          {t("login.password")}
+        </Label>
+        <div className="relative">
+          <Input
+            id="password"
+            type={showPassword ? "text" : "password"}
+            placeholder="••••••••"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="bg-background/50 border-border/50 focus:border-primary pr-10 h-10"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+          </button>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between pt-1">
+        <div className="flex items-center gap-2">
+          <Checkbox id="remember" checked={rememberMe} onCheckedChange={(checked) => setRememberMe(checked === true)} />
+          <Label htmlFor="remember" className="text-xs text-muted-foreground cursor-pointer">
+            {t("login.rememberMe")}
+          </Label>
+        </div>
+        <Link href="/forgot-password" className="text-xs text-primary hover:underline">
+          {t("login.forgotPassword")}
+        </Link>
+      </div>
+
+      <div className="pt-2">
+        <div className="bg-muted/30 rounded-lg p-3 border border-border/30">
+          <p className="text-xs text-muted-foreground text-center mb-2">{t("login.captcha")}</p>
+          <div className="h-14 bg-background/30 rounded border border-border/30 flex items-center justify-center">
+            <span className="text-xs text-muted-foreground">[ Captcha Widget ]</span>
+          </div>
+        </div>
+      </div>
+
+      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 h-10 mt-4" disabled={isLoading}>
+        {isLoading ? (
+          <>
+            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+            {t("login.loggingIn")}
+          </>
+        ) : (
+          t("login.loginButton")
+        )}
+      </Button>
+    </form>
+  )
+}
