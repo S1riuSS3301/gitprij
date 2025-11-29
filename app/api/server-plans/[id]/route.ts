@@ -12,34 +12,16 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     const body = await request.json()
     const { name, nameRu, cpu, ram, storage, bandwidth, price, popular, description } = body
 
-    // Update the plan in localStorage
-    const plans = db.serverPlan.findMany()
-    const planIndex = (await plans).findIndex((p) => p.id === params.id)
+    const updated = await db.serverPlan.update({
+      where: { id: params.id },
+      data: { name, nameRu, cpu, ram, storage, bandwidth, price, popular, description },
+    })
 
-    if (planIndex === -1) {
+    if (!updated) {
       return NextResponse.json({ error: "Plan not found" }, { status: 404 })
     }
 
-    const allPlans = await plans
-    allPlans[planIndex] = {
-      ...allPlans[planIndex],
-      name,
-      nameRu,
-      cpu,
-      ram,
-      storage,
-      bandwidth,
-      price,
-      popular,
-      description,
-    }
-
-    // Save back to localStorage
-    if (typeof window !== "undefined") {
-      localStorage.setItem("serverPlans", JSON.stringify(allPlans))
-    }
-
-    return NextResponse.json(allPlans[planIndex])
+    return NextResponse.json(updated)
   } catch (error) {
     console.error("[v0] Error updating server plan:", error)
     return NextResponse.json({ error: "Failed to update server plan" }, { status: 500 })
@@ -53,15 +35,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
-    // Delete the plan from localStorage
-    const plans = await db.serverPlan.findMany()
-    const filteredPlans = plans.filter((p) => p.id !== params.id)
-
-    // Save back to localStorage
-    if (typeof window !== "undefined") {
-      localStorage.setItem("serverPlans", JSON.stringify(filteredPlans))
-    }
-
+    await db.serverPlan.delete({ where: { id: params.id } })
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error("[v0] Error deleting server plan:", error)

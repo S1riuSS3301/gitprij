@@ -1,0 +1,3 @@
+{
+  "/api/crystalpay/callback/route": "app/api/crystalpay/callback/route.js"
+}

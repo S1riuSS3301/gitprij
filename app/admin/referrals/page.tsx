@@ -1,4 +1,4 @@
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { DashboardHeader } from "@/components/support/dashboard-header"
 import { AdminSidebar } from "@/components/admin/admin-sidebar"
 import { ReferralStatsAdmin } from "@/components/admin/referral-stats-admin"
 import { ReferralActivityTable } from "@/components/admin/referral-activity-table"

@@ -5,19 +5,29 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { Plus, Trash2 } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const promoCodes = [
-  { code: "WELCOME2025", discount: "10%", uses: 45, maxUses: 100, expires: "31.12.2025", active: true },
-  { code: "SUMMER50", discount: "$50", uses: 23, maxUses: 50, expires: "31.08.2025", active: true },
-  { code: "FIRSTSERVER", discount: "20%", uses: 89, maxUses: 100, expires: "31.03.2025", active: false },
-]
+type Promo = { id: string; code: string; discount: number; type: "percentage" | "fixed"; maxUses: number; currentUses: number; expiresAt: string; active: boolean }
 
 export function PromoCodesManager() {
   const [code, setCode] = useState("")
   const [discount, setDiscount] = useState("")
+  const [type, setType] = useState<"percentage" | "fixed">("percentage")
   const [maxUses, setMaxUses] = useState("")
   const [expires, setExpires] = useState("")
+  const [active, setActive] = useState(true)
+  const [rows, setRows] = useState<Promo[]>([])
+
+  const load = async () => {
+    const res = await fetch("/api/promo-codes")
+    if (!res.ok) return
+    const data = await res.json()
+    setRows(data)
+  }
+
+  useEffect(() => {
+    load()
+  }, [])
 
   return (
     <div className="space-y-6">
@@ -52,6 +62,14 @@ export function PromoCodesManager() {
           </div>
 
           <div className="space-y-2">
+            <Label className="text-foreground">Тип скидки</Label>
+            <div className="flex gap-3">
+              <Button type="button" variant={type === "percentage" ? "default" : "outline"} size="sm" onClick={() => setType("percentage")}>%</Button>
+              <Button type="button" variant={type === "fixed" ? "default" : "outline"} size="sm" onClick={() => setType("fixed")}>$</Button>
+            </div>
+          </div>
+
+          <div className="space-y-2">
             <Label htmlFor="max-uses" className="text-foreground">
               Максимум использований
             </Label>
@@ -79,10 +97,38 @@ export function PromoCodesManager() {
           </div>
         </div>
 
-        <Button className="mt-6 bg-primary hover:bg-primary/90 gap-2">
-          <Plus className="w-4 h-4" />
-          Создать промокод
-        </Button>
+        <div className="flex items-center gap-3 mt-4">
+          <div className="flex items-center gap-2">
+            <input id="active" type="checkbox" checked={active} onChange={(e) => setActive(e.target.checked)} />
+            <Label htmlFor="active" className="text-foreground">Активен</Label>
+          </div>
+          <Button
+            className="ml-auto bg-primary hover:bg-primary/90 gap-2"
+            onClick={async () => {
+              const payload = {
+                code: code.trim(),
+                discount: Number((discount || "").replace(/[^0-9.]/g, "")),
+                type,
+                maxUses: Number(maxUses || 0),
+                expiresAt: expires,
+                active,
+              }
+              if (!payload.code || !payload.discount || !payload.maxUses || !payload.expiresAt) return
+              const res = await fetch("/api/promo-codes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+              if (res.ok) {
+                setCode("")
+                setDiscount("")
+                setMaxUses("")
+                setExpires("")
+                setActive(true)
+                load()
+              }
+            }}
+          >
+            <Plus className="w-4 h-4" />
+            Создать промокод
+          </Button>
+        </div>
       </div>
 
       <div className="card-gradient rounded-xl p-6 border border-border/50">
@@ -101,21 +147,31 @@ export function PromoCodesManager() {
               </tr>
             </thead>
             <tbody>
-              {promoCodes.map((promo, index) => (
-                <tr key={index} className="border-b border-border/30 hover:bg-background/30 transition-colors">
+              {rows.map((promo) => (
+                <tr key={promo.id} className="border-b border-border/30 hover:bg-background/30 transition-colors">
                   <td className="py-4 px-4 text-sm font-medium text-foreground">{promo.code}</td>
-                  <td className="py-4 px-4 text-sm text-foreground">{promo.discount}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground">
-                    {promo.uses} / {promo.maxUses}
+                  <td className="py-4 px-4 text-sm text-foreground">
+                    {promo.type === "percentage" ? `${promo.discount}%` : `$${promo.discount}`}
                   </td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground">{promo.expires}</td>
+                  <td className="py-4 px-4 text-sm text-muted-foreground">
+                    {promo.currentUses} / {promo.maxUses}
+                  </td>
+                  <td className="py-4 px-4 text-sm text-muted-foreground">{new Date(promo.expiresAt).toLocaleDateString()}</td>
                   <td className="py-4 px-4">
                     <Badge variant={promo.active ? "default" : "secondary"}>
                       {promo.active ? "Активен" : "Неактивен"}
                     </Badge>
                   </td>
                   <td className="py-4 px-4">
-                    <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="text-destructive hover:text-destructive"
+                      onClick={async () => {
+                        const res = await fetch(`/api/promo-codes/${promo.id}`, { method: "DELETE" })
+                        if (res.ok) load()
+                      }}
+                    >
                       <Trash2 className="w-4 h-4" />
                     </Button>
                   </td>

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/saefs/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/terms/page.tsx"],"sourcesContent":["export default function TermsPage() {\r\n  return (\r\n    <div className=\"min-h-screen gradient-purple text-foreground p-8\">\r\n      <div className=\"max-w-3xl mx-auto\">\r\n        <h1 className=\"text-3xl font-bold mb-4\">Условия использования</h1>\r\n        <p className=\"text-muted-foreground\">\r\n          Это демонстрационная страница условий использования. Замените её на реальные условия.\r\n        </p>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\n\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,6TAAC;QAAI,WAAU;kBACb,cAAA,6TAAC;YAAI,WAAU;;8BACb,6TAAC;oBAAG,WAAU;8BAA0B;;;;;;8BACxC,6TAAC;oBAAE,WAAU;8BAAwB;;;;;;;;;;;;;;;;;AAM7C","debugId":null}}]
+}

@@ -1,92 +1,126 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { DollarSign } from "lucide-react"
+import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
-const referrals = [
-  {
-    user: "user12346@example.com",
-    joined: "18.01.2025",
-    totalDeposits: "$150.00",
-    yourEarnings: "$15.00",
-    status: "active",
-  },
-  {
-    user: "user12347@example.com",
-    joined: "17.01.2025",
-    totalDeposits: "$200.00",
-    yourEarnings: "$20.00",
-    status: "active",
-  },
-  {
-    user: "user12348@example.com",
-    joined: "15.01.2025",
-    totalDeposits: "$75.00",
-    yourEarnings: "$7.50",
-    status: "active",
-  },
-  {
-    user: "user12349@example.com",
-    joined: "14.01.2025",
-    totalDeposits: "$500.00",
-    yourEarnings: "$50.00",
-    status: "active",
-  },
-  {
-    user: "user12350@example.com",
-    joined: "12.01.2025",
-    totalDeposits: "$100.00",
-    yourEarnings: "$10.00",
-    status: "inactive",
-  },
-]
+interface ReferralItem {
+  id: string
+  referredId: string
+  earnings: number
+  createdAt: string
+  referredUser?: {
+    email?: string
+    name?: string
+  }
+}
 
 export function ReferralHistory() {
+  const [referrals, setReferrals] = useState<ReferralItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const { language } = useLanguage()
+
+  useEffect(() => {
+    const loadReferrals = async () => {
+      try {
+        const res = await fetch("/api/referrals", { cache: "no-store" })
+        if (res.ok) {
+          const data = await res.json()
+          setReferrals(data.referrals || [])
+        }
+      } catch (error) {
+        console.error("Failed to load referrals:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadReferrals()
+  }, [])
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString(language === "ru" ? "ru-RU" : "en-US")
+  }
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount)
+  }
+
+  if (loading) {
+    return (
+      <div className="card-gradient rounded-xl p-6 border border-border/50">
+        <h2 className="text-xl font-bold text-foreground mb-6">
+          {language === "ru" ? "Ваши рефералы" : "Your Referrals"}
+        </h2>
+        <div className="text-center py-8 text-muted-foreground">
+          {language === "ru" ? "Загрузка..." : "Loading..."}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="card-gradient rounded-xl p-6 border border-border/50">
-      <h2 className="text-xl font-bold text-foreground mb-6">Ваши рефералы</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">
+        {language === "ru" ? "Ваши рефералы" : "Your Referrals"}
+      </h2>
 
-      <div className="overflow-x-auto">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-border/50">
-              <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">Пользователь</th>
-              <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">Дата регистрации</th>
-              <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">Всего пополнений</th>
-              <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">Ваш доход</th>
-              <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">Статус</th>
-            </tr>
-          </thead>
-          <tbody>
-            {referrals.map((referral, index) => (
-              <tr key={index} className="border-b border-border/30 hover:bg-background/30 transition-colors">
-                <td className="py-4 px-4">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="w-8 h-8">
-                      <AvatarFallback className="bg-primary/20 text-primary text-xs">
-                        {referral.user.substring(0, 2).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-                    <span className="text-sm text-foreground">{referral.user}</span>
-                  </div>
-                </td>
-                <td className="py-4 px-4 text-sm text-muted-foreground">{referral.joined}</td>
-                <td className="py-4 px-4 text-sm text-foreground">{referral.totalDeposits}</td>
-                <td className="py-4 px-4">
-                  <div className="flex items-center gap-2">
-                    <DollarSign className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-semibold text-green-400">{referral.yourEarnings}</span>
-                  </div>
-                </td>
-                <td className="py-4 px-4">
-                  <Badge variant={referral.status === "active" ? "default" : "secondary"}>
-                    {referral.status === "active" ? "Активен" : "Неактивен"}
-                  </Badge>
-                </td>
+      {referrals.length === 0 ? (
+        <div className="text-center py-8 text-muted-foreground">
+          {language === "ru" 
+            ? "У вас пока нет рефералов" 
+            : "You don't have any referrals yet"}
+        </div>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-border/50">
+                <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">
+                  {language === "ru" ? "Пользователь" : "User"}
+                </th>
+                <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">
+                  {language === "ru" ? "Дата регистрации" : "Registration Date"}
+                </th>
+                <th className="text-left py-3 px-4 text-sm font-semibold text-muted-foreground">
+                  {language === "ru" ? "Ваш доход" : "Your Earnings"}
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {referrals.map((referral) => {
+                const userEmail = referral.referredUser?.email || referral.referredId || "N/A"
+                return (
+                  <tr key={referral.id} className="border-b border-border/30 hover:bg-background/30 transition-colors">
+                    <td className="py-4 px-4">
+                      <div className="flex items-center gap-3">
+                        <Avatar className="w-8 h-8">
+                          <AvatarFallback className="bg-primary/20 text-primary text-xs">
+                            {userEmail.substring(0, 2).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                        <span className="text-sm text-foreground">{userEmail}</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-4 text-sm text-muted-foreground">
+                      {formatDate(referral.createdAt)}
+                    </td>
+                    <td className="py-4 px-4">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4 text-green-400" />
+                        <span className="text-sm font-semibold text-green-400">
+                          {formatCurrency(referral.earnings)}
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   )
 }

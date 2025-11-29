@@ -11,73 +11,363 @@ import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { ServerPlanCard } from "@/components/server-plan-card"
 
-type BillingPeriod = "hour" | "month" | "3months" | "year"
+type BillingPeriod = "month"
 
-const billingPeriods: BillingPeriod[] = ["hour", "month", "3months", "year"]
+// Изменили billingPeriods: оставили только "month"
+const billingPeriods: BillingPeriod[] = ["month"]
 
-const serverPlans = [
+// DDR5 PLANS
+const serverPlansDDR5 = [
   {
-    name: "1 vCore",
-    cores: 1,
+    name: "2 vCore DDR5",
+    cores: 2,
     ram: 2,
-    storage: 30,
-    prices: { hour: 0.05, month: 1.6, "3months": 4.5, year: 16 },
+    storage: 35,
+    ramType: "DDR5",
+    prices: { month: 6, hour: 0.02 },
+    nvme: false,
   },
   {
-    name: "2 vCore",
+    name: "2 vCore DDR5",
     cores: 2,
     ram: 4,
-    storage: 45,
-    prices: { hour: 0.17, month: 5, "3months": 14, year: 50 },
+    storage: 55,
+    ramType: "DDR5",
+    prices: { month: 10, hour: 0.03 },
+    nvme: false,
   },
   {
-    name: "3 vCore",
-    cores: 3,
+    name: "4 vCore DDR5",
+    cores: 4,
     ram: 6,
-    storage: 70,
-    prices: { hour: 0.23, month: 7, "3months": 20, year: 70 },
+    storage: 85,
+    ramType: "DDR5",
+    prices: { month: 18, hour: 0.04 },
+    nvme: false,
   },
   {
-    name: "4 vCore",
+    name: "4 vCore DDR5",
     cores: 4,
     ram: 8,
-    storage: 80,
-    prices: { hour: 0.37, month: 11, "3months": 31, year: 110 },
-    popular: true,
+    storage: 115,
+    ramType: "DDR5",
+    prices: { month: 23, hour: 0.05 },
+    nvme: false,
   },
   {
-    name: "6 vCore",
+    name: "5 vCore DDR5",
+    cores: 5,
+    ram: 10,
+    storage: 155,
+    ramType: "DDR5",
+    prices: { month: 29, hour: 0.07 },
+    nvme: false,
+  },
+  {
+    name: "6 vCore DDR5",
     cores: 6,
     ram: 12,
-    storage: 110,
-    prices: { hour: 0.5, month: 15, "3months": 42, year: 150 },
+    storage: 185,
+    ramType: "DDR5",
+    prices: { month: 35, hour: 0.09 },
+    nvme: false,
   },
   {
-    name: "8 vCore",
+    name: "8 vCore DDR5",
     cores: 8,
     ram: 16,
-    storage: 140,
-    prices: { hour: 0.63, month: 19, "3months": 53, year: 190 },
+    storage: 275,
+    ramType: "DDR5",
+    prices: { month: 49, hour: 0.11 },
+    nvme: false,
   },
   {
-    name: "8 vCore Pro",
-    cores: 8,
-    ram: 32,
-    storage: 220,
-    prices: { hour: 0.9, month: 26, "3months": 73, year: 260 },
+    name: "10 vCore DDR5",
+    cores: 10,
+    ram: 20,
+    storage: 325,
+    ramType: "DDR5",
+    prices: { month: 60, hour: 0.13 },
+    nvme: false,
   },
   {
-    name: "12 vCore",
+    name: "12 vCore DDR5",
     cores: 12,
     ram: 24,
-    storage: 250,
-    prices: { hour: 1.25, month: 36, "3months": 101, year: 360 },
+    storage: 365,
+    ramType: "DDR5",
+    prices: { month: 75, hour: 0.16 },
+    nvme: false,
   },
+  {
+    name: "14 vCore DDR5",
+    cores: 14,
+    ram: 28,
+    storage: 400,
+    ramType: "DDR5",
+    prices: { month: 88, hour: 0.18 },
+    nvme: false,
+  },
+  {
+    name: "16 vCore DDR5",
+    cores: 16,
+    ram: 32,
+    storage: 500,
+    ramType: "DDR5",
+    prices: { month: 99, hour: 0.2 },
+    nvme: false,
+    cpu: "Dual EPYC 7702"
+  },
+]
+
+// DDR4 PLANS
+const serverPlansDDR4 = [
+  {
+    name: "2 vCore DDR4",
+    cores: 2,
+    ram: 2,
+    storage: 35,
+    ramType: "DDR4",
+    prices: { month: 4, hour: 0.02 },
+    nvme: true,
+  },
+  {
+    name: "2 vCore DDR4",
+    cores: 2,
+    ram: 4,
+    storage: 55,
+    ramType: "DDR4",
+    prices: { month: 6, hour: 0.04 },
+    nvme: true,
+  },
+  {
+    name: "3 vCore DDR4",
+    cores: 3,
+    ram: 4,
+    storage: 65,
+    ramType: "DDR4",
+    prices: { month: 8, hour: 0.05 },
+    nvme: true,
+  },
+  {
+    name: "4 vCore DDR4",
+    cores: 4,
+    ram: 6,
+    storage: 85,
+    ramType: "DDR4",
+    prices: { month: 11, hour: 0.06 },
+    nvme: true,
+  },
+  {
+    name: "4 vCore DDR4",
+    cores: 4,
+    ram: 8,
+    storage: 115,
+    ramType: "DDR4",
+    prices: { month: 15, hour: 0.08 },
+    nvme: true,
+  },
+  {
+    name: "5 vCore DDR4",
+    cores: 5,
+    ram: 10,
+    storage: 140,
+    ramType: "DDR4",
+    prices: { month: 18, hour: 0.09 },
+    nvme: true,
+  },
+  {
+    name: "6 vCore DDR4",
+    cores: 6,
+    ram: 12,
+    storage: 160,
+    ramType: "DDR4",
+    prices: { month: 22, hour: 0.12 },
+    nvme: true,
+  },
+  {
+    name: "8 vCore DDR4",
+    cores: 8,
+    ram: 16,
+    storage: 200,
+    ramType: "DDR4",
+    prices: { month: 26, hour: 0.14 },
+    nvme: true,
+  },
+  {
+    name: "10 vCore DDR4",
+    cores: 10,
+    ram: 20,
+    storage: 250,
+    ramType: "DDR4",
+    prices: { month: 32, hour: 0.18 },
+    nvme: true,
+  },
+  {
+    name: "12 vCore DDR4",
+    cores: 12,
+    ram: 24,
+    storage: 300,
+    ramType: "DDR4",
+    prices: { month: 36, hour: 0.22 },
+    nvme: true,
+  },
+  {
+    name: "14 vCore DDR4",
+    cores: 14,
+    ram: 28,
+    storage: 300,
+    ramType: "DDR4",
+    prices: { month: 40, hour: 0.26 },
+    nvme: true,
+  },
+  {
+    name: "16 vCore DDR4",
+    cores: 16,
+    ram: 32,
+    storage: 300,
+    ramType: "DDR4",
+    prices: { month: 47, hour: 0.31 },
+    nvme: true,
+  },
+  {
+    name: "20 vCore DDR4",
+    cores: 20,
+    ram: 40,
+    storage: 300,
+    ramType: "DDR4",
+    prices: { month: 55, hour: 0.37 },
+    nvme: true,
+  },
+  {
+    name: "24 vCore DDR4",
+    cores: 24,
+    ram: 48,
+    storage: 350,
+    ramType: "DDR4",
+    prices: { month: 62, hour: 0.45 },
+    nvme: true,
+  },
+  {
+    name: "28 vCore DDR4",
+    cores: 28,
+    ram: 56,
+    storage: 400,
+    ramType: "DDR4",
+    prices: { month: 71, hour: 0.53 },
+    nvme: true,
+  },
+  {
+    name: "32 vCore DDR4",
+    cores: 32,
+    ram: 64,
+    storage: 450,
+    ramType: "DDR4",
+    prices: { month: 85, hour: 0.61 },
+    nvme: true,
+  },
+  {
+    name: "36 vCore DDR4",
+    cores: 36,
+    ram: 72,
+    storage: 500,
+    ramType: "DDR4",
+    prices: { month: 100, hour: 0.73 },
+    nvme: true,
+  },
+  {
+    name: "48 vCore DDR4",
+    cores: 48,
+    ram: 96,
+    storage: 600,
+    ramType: "DDR4",
+    prices: { month: 138, hour: 1.03 },
+    nvme: true,
+  },
+  {
+    name: "56 vCore DDR4",
+    cores: 56,
+    ram: 112,
+    storage: 650,
+    ramType: "DDR4",
+    prices: { month: 156, hour: 1.24 },
+    nvme: true,
+  },
+  {
+    name: "64 vCore DDR4",
+    cores: 64,
+    ram: 128,
+    storage: 700,
+    ramType: "DDR4",
+    prices: { month: 175, hour: 1.52 },
+    nvme: true,
+  },
+  {
+    name: "72 vCore DDR4",
+    cores: 72,
+    ram: 128,
+    storage: 700,
+    ramType: "DDR4",
+    prices: { month: 201, hour: 1.86 },
+    nvme: true,
+  },
+  {
+    name: "80 vCore DDR4",
+    cores: 80,
+    ram: 132,
+    storage: 750,
+    ramType: "DDR4",
+    prices: { month: 265, hour: 2.25 },
+    nvme: true,
+  },
+  {
+    name: "88 vCore DDR4",
+    cores: 88,
+    ram: 156,
+    storage: 800,
+    ramType: "DDR4",
+    prices: { month: 289, hour: 2.77 },
+    nvme: true,
+  },
+  {
+    name: "96 vCore DDR4",
+    cores: 96,
+    ram: 192,
+    storage: 900,
+    ramType: "DDR4",
+    prices: { month: 326, hour: 3.36 },
+    nvme: true,
+  },
+  {
+    name: "112 vCore DDR4",
+    cores: 112,
+    ram: 224,
+    storage: 1024,
+    ramType: "DDR4",
+    prices: { month: 395, hour: 5.72 },
+    nvme: true,
+  },
+  {
+    name: "128 vCore DDR4",
+    cores: 128,
+    ram: 256,
+    storage: 1024,
+    ramType: "DDR4",
+    prices: { month: 445, hour: 8.20 },
+    nvme: true,
+  },
+]
+
+// Combine plans for display (DDR5 first, then DDR4)
+const serverPlans = [
+  ...serverPlansDDR5,
+  ...serverPlansDDR4,
 ]
 
 export function ServerConfigurator() {
   const [serverName, setServerName] = useState("")
-  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("hour")
+  // billingPeriod Только месяц
+  const [billingPeriod] = useState<BillingPeriod>("month")
   const [showMore, setShowMore] = useState(false)
   const { user } = useAuth()
   const { createServer } = useData()
@@ -85,6 +375,7 @@ export function ServerConfigurator() {
   const { t } = useLanguage()
   const router = useRouter()
 
+  // Show 8 DDR5 plans, expand to all DDR5+DDR4 on show more
   const visiblePlans = showMore ? serverPlans : serverPlans.slice(0, 8)
 
   const handleCreateServer = (plan: (typeof serverPlans)[0]) => {
@@ -92,26 +383,22 @@ export function ServerConfigurator() {
       router.push("/login")
       return
     }
-
     if (!serverName.trim()) {
       alert(t("configurator.enterName"))
       return
     }
-
     const priceUSD = plan.prices[billingPeriod]
     const price = convertPrice(priceUSD)
-
-    if (user.balance < price) {
+    // @ts-ignore balance type -- update if balance is elsewhere
+    if ((user as any).balance < price) {
       alert(t("configurator.insufficientFunds"))
       router.push("/dashboard/billing")
       return
     }
 
     const expiresAt = new Date()
-    if (billingPeriod === "hour") expiresAt.setHours(expiresAt.getHours() + 1)
-    else if (billingPeriod === "month") expiresAt.setMonth(expiresAt.getMonth() + 1)
-    else if (billingPeriod === "3months") expiresAt.setMonth(expiresAt.getMonth() + 3)
-    else if (billingPeriod === "year") expiresAt.setFullYear(expiresAt.getFullYear() + 1)
+    // only "month"
+    expiresAt.setMonth(expiresAt.getMonth() + 1)
 
     createServer({
       name: serverName,
@@ -124,6 +411,9 @@ export function ServerConfigurator() {
       expiresAt: expiresAt.toISOString(),
       billingPeriod,
       price,
+      ramType: plan.ramType,
+      nvme: plan.nvme,
+      cpu: plan.cpu,
     })
 
     router.push("/dashboard")
@@ -148,7 +438,8 @@ export function ServerConfigurator() {
             />
           </div>
 
-          <div className="space-y-3">
+          {/* Убрали выбор периода, остался только месяц */}
+          {/* <div className="space-y-3">
             <Label className="text-foreground">{t("configurator.billingType")}</Label>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               {billingPeriods.map((period) => (
@@ -165,7 +456,7 @@ export function ServerConfigurator() {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="space-y-3">
             <Label className="text-foreground">{t("configurator.selectPlan")}</Label>

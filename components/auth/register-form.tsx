@@ -2,8 +2,8 @@
 
 import type React from "react"
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
 import { signUp } from "@/lib/actions/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,6 +25,14 @@ export function RegisterForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const referralCode = searchParams?.get("ref") || undefined
+
+  useEffect(() => {
+    if (referralCode) {
+      // Можно показать уведомление что реферальный код применен
+    }
+  }, [referralCode])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -48,7 +56,7 @@ export function RegisterForm() {
     setIsLoading(true)
 
     try {
-      const result = await signUp(email, password, fullName)
+      const result = await signUp(email, password, fullName, referralCode)
 
       if (result.error) {
         setError(result.error)

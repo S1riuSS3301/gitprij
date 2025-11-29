@@ -16,21 +16,19 @@ export function StatsCards() {
   })
 
   useEffect(() => {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}")
-    const orders = JSON.parse(localStorage.getItem("orders") || "[]")
-    const userOrders = orders.filter((o: any) => o.userId === currentUser.id)
-
-    const activeServers = userOrders.filter((o: any) => o.status === "active").length
-    const balance = currentUser.profile?.balance || 0
-    const usage = activeServers > 0 ? 67 : 0
-    const referralIncome = 12.5
-
-    setStats({
-      activeServers,
-      balance,
-      usage,
-      referralIncome,
-    })
+    const fetchStats = async () => {
+      try {
+        const profileRes = await fetch("/api/profile", { cache: "no-store" })
+        const profile = profileRes.ok ? await profileRes.json() : { balance: 0 }
+        setStats((stats) => ({
+          ...stats,
+          balance: profile.balance || 0,
+        }))
+      } catch {
+        setStats((stats) => ({ ...stats, balance: 0 }))
+      }
+    }
+    fetchStats()
   }, [])
 
   const statsData = [

@@ -36,7 +36,7 @@ export async function signIn(email: string, password: string) {
   }
 }
 
-export async function signUp(email: string, password: string, name?: string) {
+export async function signUp(email: string, password: string, name?: string, referralCode?: string) {
   try {
     const existingUser = await db.user.findUnique({
       where: { email },
@@ -47,12 +47,28 @@ export async function signUp(email: string, password: string, name?: string) {
     }
 
     const hashedPassword = await hashPassword(password)
+    
+    // Генерируем уникальный реферальный код
+    const userReferralCode = Math.random().toString(36).substring(2, 10).toUpperCase()
+    
+    // Проверяем реферальный код если указан
+    let referrerId: string | undefined
+    if (referralCode) {
+      const referrer = await db.user.findUnique({
+        where: { referralCode },
+      })
+      if (referrer) {
+        referrerId = referrer.id
+      }
+    }
 
     const user = await db.user.create({
       data: {
         email,
         password: hashedPassword,
         name,
+        referralCode: userReferralCode,
+        referredBy: referrerId,
         profile: {
           create: {
             balance: 0,
@@ -60,6 +76,17 @@ export async function signUp(email: string, password: string, name?: string) {
         },
       },
     })
+
+    // Создаем запись о реферале если есть реферер
+    if (referrerId) {
+      await db.referral.create({
+        data: {
+          referrerId,
+          referredId: user.id,
+          earnings: 0,
+        },
+      })
+    }
 
     const token = await signToken({
       userId: user.id,

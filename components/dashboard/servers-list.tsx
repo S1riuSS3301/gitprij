@@ -2,11 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Server, MoreVertical, Power, Settings, Trash2, Clock } from "lucide-react"
+import { Server, MoreVertical } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useCurrency } from "@/contexts/currency-context"
 import { useEffect, useState } from "react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 interface ServerOrder {
   id: string
@@ -25,44 +24,17 @@ export function ServersList() {
   const [servers, setServers] = useState<ServerOrder[]>([])
   const [plans, setPlans] = useState<any[]>([])
 
-  const loadServers = () => {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}")
-    const orders = JSON.parse(localStorage.getItem("orders") || "[]")
-    const serverPlans = JSON.parse(localStorage.getItem("serverPlans") || "[]")
-    const userOrders = orders.filter((o: any) => o.userId === currentUser.id)
-    setServers(userOrders)
-    setPlans(serverPlans)
-  }
-
   useEffect(() => {
-    loadServers()
+    fetch('/api/orders', { cache: 'no-store' })
+      .then(res => res.ok ? res.json() : [])
+      .then(data => setServers(data || []))
+    fetch('/api/server-plans', { cache: 'no-store' })
+      .then(res => res.ok ? res.json() : [])
+      .then(data => setPlans(data || []))
   }, [])
 
   const getPlan = (planId: string) => {
     return plans.find((p) => p.id === planId)
-  }
-
-  const handleToggleStatus = (serverId: string) => {
-    const orders = JSON.parse(localStorage.getItem("orders") || "[]")
-    const index = orders.findIndex((o: any) => o.id === serverId)
-    if (index !== -1) {
-      orders[index].status = orders[index].status === "active" ? "stopped" : "active"
-      localStorage.setItem("orders", JSON.stringify(orders))
-      loadServers()
-    }
-  }
-
-  const handleDelete = (serverId: string) => {
-    if (!confirm(t("servers.confirmDelete"))) return
-
-    const orders = JSON.parse(localStorage.getItem("orders") || "[]")
-    const filtered = orders.filter((o: any) => o.id !== serverId)
-    localStorage.setItem("orders", JSON.stringify(filtered))
-    loadServers()
-  }
-
-  const handleExtend = (serverId: string) => {
-    alert(t("servers.extendInfo"))
   }
 
   return (
@@ -103,27 +75,7 @@ export function ServersList() {
                     <Badge variant={server.status === "active" ? "default" : "secondary"} className="capitalize">
                       {server.status === "active" ? t("servers.running") : t("servers.stopped")}
                     </Badge>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button size="sm" variant="ghost">
-                          <MoreVertical className="w-4 h-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={() => handleToggleStatus(server.id)}>
-                          <Power className="w-4 h-4 mr-2" />
-                          {server.status === "active" ? t("servers.stop") : t("servers.start")}
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => handleExtend(server.id)}>
-                          <Clock className="w-4 h-4 mr-2" />
-                          {t("servers.extend")}
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => handleDelete(server.id)} className="text-destructive">
-                          <Trash2 className="w-4 h-4 mr-2" />
-                          {t("servers.delete")}
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                    {/* Удалены действия управления сервером */}
                   </div>
                 </div>
 
@@ -132,21 +84,29 @@ export function ServersList() {
                     <p className="text-xs text-muted-foreground">{t("servers.plan")}</p>
                     <p className="text-sm font-medium text-foreground">
                       {plan ? (language === "ru" ? plan.nameRu : plan.name) : "N/A"}
+                      {/* Dual EPYC 7702 мес/час, если план соответсвует */}
+                      {plan?.cpu && plan.cpu === "Dual EPYC 7702" && (
+                        <span className="ml-2 text-[.85em] text-muted-foreground font-normal">(мес/час)</span>
+                      )}
                     </p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">{t("plan.cpu")}</p>
                     <p className="text-sm font-medium text-foreground">
-                      {plan?.cpu || "N/A"} {t("plan.cores")}
+                      {plan?.cores || plan?.cpu || "N/A"} {t("plan.cores")}
                     </p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">{t("plan.ram")}</p>
-                    <p className="text-sm font-medium text-foreground">{plan?.ram || "N/A"} GB</p>
+                    <p className="text-sm font-medium text-foreground">
+                      {plan?.ram || "N/A"} GB DDR4
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">{t("plan.storage")}</p>
-                    <p className="text-sm font-medium text-foreground">{plan?.storage || "N/A"} GB</p>
+                    <p className="text-sm font-medium text-foreground">
+                      {plan?.storage || "N/A"} GB NVMe
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">{t("servers.expiresIn")}</p>
@@ -160,21 +120,6 @@ export function ServersList() {
                   <div className="text-sm text-muted-foreground">
                     {t("servers.paid")}: {formatPrice(convertPrice(server.pricePaid))} /{" "}
                     {t(`servers.${server.billingPeriod}`)}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="gap-2 bg-transparent"
-                      onClick={() => handleToggleStatus(server.id)}
-                    >
-                      <Power className="w-4 h-4" />
-                      {server.status === "active" ? t("servers.stop") : t("servers.start")}
-                    </Button>
-                    <Button size="sm" variant="outline" className="gap-2 bg-transparent">
-                      <Settings className="w-4 h-4" />
-                      {t("servers.manage")}
-                    </Button>
                   </div>
                 </div>
               </div>

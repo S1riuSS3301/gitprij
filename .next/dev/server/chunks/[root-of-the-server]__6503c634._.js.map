@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/saefs/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/api/config/payments/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\"\r\n\r\nexport async function GET() {\r\n  // Серверная сторона: читаем ENV, .env.local подхватывается рантаймом Next\r\n  const authLogin = process.env.AUTH_LOGIN\r\n  const authSecret = process.env.AUTH_SECRET\r\n  const redirectUrl = process.env.REDIRECT_URL || \"http://localhost:3000/dashboard/billing\"\r\n\r\n  const crystalpayEnabled = Boolean(authLogin && authSecret)\r\n\r\n  return NextResponse.json({\r\n    crystalpayEnabled,\r\n    redirectUrl,\r\n  })\r\n}\r\n\r\n\r\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe;IACpB,0EAA0E;IAC1E,MAAM,YAAY,QAAQ,GAAG,CAAC,UAAU;IACxC,MAAM,aAAa,QAAQ,GAAG,CAAC,WAAW;IAC1C,MAAM,cAAc,QAAQ,GAAG,CAAC,YAAY,IAAI;IAEhD,MAAM,oBAAoB,QAAQ,aAAa;IAE/C,OAAO,+NAAY,CAAC,IAAI,CAAC;QACvB;QACA;IACF;AACF","debugId":null}}]
+}

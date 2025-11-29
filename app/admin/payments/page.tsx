@@ -1,4 +1,4 @@
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { DashboardHeader } from "@/components/support/dashboard-header"
 import { AdminSidebar } from "@/components/admin/admin-sidebar"
 import { PaymentsTable } from "@/components/admin/payments-table"
 import { PaymentStats } from "@/components/admin/payment-stats"

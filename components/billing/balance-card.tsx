@@ -4,19 +4,18 @@ import { Button } from "@/components/ui/button"
 import { Wallet, TrendingUp, ArrowUpRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useCurrency } from "@/contexts/currency-context"
+import { useAuth } from "@/contexts/auth-context"
 import { useEffect, useState } from "react"
 
 export function BalanceCard() {
   const { t } = useLanguage()
   const { formatPrice, convertPrice } = useCurrency()
-  const [balance, setBalance] = useState(0)
+  const { user, refresh } = useAuth()
+  const balance = typeof user?.profile?.balance === "number" ? user.profile.balance : 0
 
-  useEffect(() => {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}")
-    const profiles = JSON.parse(localStorage.getItem("profiles") || "[]")
-    const userProfile = profiles.find((p: any) => p.userId === currentUser.id)
-    setBalance(userProfile?.balance || 0)
-  }, [])
+  const handleRefresh = async () => {
+    await refresh()
+  }
 
   return (
     <div className="card-gradient rounded-xl p-6 lg:p-8 border border-border/50">
@@ -37,9 +36,9 @@ export function BalanceCard() {
           </div>
         </div>
 
-        <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2">
+        <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2" onClick={handleRefresh}>
           <ArrowUpRight className="w-5 h-5" />
-          {t("dashboard.topUp")}
+          {t("dashboard.topUp")} / Обновить
         </Button>
       </div>
 

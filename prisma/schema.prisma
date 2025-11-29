@@ -1,0 +1,109 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+
+// Models
+model User {
+  id            String        @id @default(cuid())
+  email         String        @unique
+  password      String
+  name          String?
+  role          String        @default("user")
+  referralCode  String        @unique @default(cuid())
+  referredBy    String?
+  createdAt     DateTime      @default(now())
+
+  // Relations
+  profile       Profile?
+  orders        Order[]
+  transactions  Transaction[]
+  referrals     Referral[]    @relation("Referrer")
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  balance   Float    @default(0)
+  fullName  String?
+  createdAt DateTime @default(now())
+
+  // Relations
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ServerPlan {
+  id         String   @id @default(cuid())
+  name       String
+  nameRu     String
+  cpu        Int
+  ram        Int
+  storage    Int
+  bandwidth  Int
+  price      Float
+  popular    Boolean  @default(false)
+  description String?
+
+  // Relations
+  orders     Order[]
+}
+
+enum BillingPeriod {
+  monthly
+  quarterly
+  yearly
+}
+
+enum OrderStatus {
+  active
+  expired
+  cancelled
+}
+
+model Order {
+  id            String        @id @default(cuid())
+  userId        String
+  serverPlanId  String
+  pricePaid     Float
+  billingPeriod BillingPeriod @default(monthly)
+  serverName    String
+  status        OrderStatus   @default(active)
+  expiresAt     DateTime
+  createdAt     DateTime      @default(now())
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  serverPlan ServerPlan @relation(fields: [serverPlanId], references: [id], onDelete: Restrict)
+}
+
+model Transaction {
+  id           String   @id @default(uuid())
+  userId       String
+  amount       Float
+  currency     String   @default("USD")
+  method       String
+  status       String
+  externalId   String?
+  // The `type` field is not used in the application/database layer. Removing for schema clarity:
+  type      String   @default("topup")
+  description String?
+  createdAt   DateTime @default(now())
+  completedAt DateTime?
+
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Referral {
+  id            String   @id @default(cuid())
+  referrerId    String
+  referredId    String   @unique
+  earnings      Float    @default(0)
+  createdAt     DateTime @default(now())
+
+  referrer      User     @relation("Referrer", fields: [referrerId], references: [id], onDelete: Cascade)
+}

@@ -3,9 +3,12 @@ import { Sidebar } from "@/components/sidebar"
 import { ServerConfigurator } from "@/components/server-configurator"
 import { FeaturesSection } from "@/components/features-section"
 import { HeroSection } from "@/components/hero-section"
+import { Footer } from "@/components/footer"
+
 
 export default function HomePage() {
   return (
+
     <div className="min-h-screen gradient-purple">
       <Header />
       <div className="flex">
@@ -15,6 +18,7 @@ export default function HomePage() {
             <HeroSection />
             <FeaturesSection />
             <ServerConfigurator />
+            <Footer />
           </div>
         </main>
       </div>

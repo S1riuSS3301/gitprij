@@ -1,0 +1,98 @@
+E:\myNEW\my 19.10\ytwhite\GE_93.177.185.201_2025-10-18 12_37_21_KZ0KL0EWQJYVGHOTBU\Browser\Cookies\Chrome_Default[7da1cf77].txt
+Email: floo.meer@mail.ru | Sites: 2 | Primary Site: http://floomeer-rwilu.wordpress.com
+---------------------------
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga	GA1.1.1682331508.1759908084
+.wordpress.com	TRUE	/	FALSE	1764547200	_gcl_au	1.1.719059943.1759908084
+.wordpress.com	TRUE	/	TRUE	1764547200	_hjSessionUser_227769	eyJpZCI6ImExNjg4MmQzLTU4MmUtNTI0OS1iNDdmLTc0NTFiOGU5N2RhNyIsImNyZWF0ZWQiOjE3NTk5MDgwODM3NjgsImV4aXN0aW5nIjp0cnVlfQ==
+.wordpress.com	TRUE	/	TRUE	1764547200	_rdt_uuid	1759908087750.e9758e01-4ceb-45fc-ac56-1f8d08b3561a
+.wordpress.com	TRUE	/	FALSE	1764547200	_uetvid	65444650a41711f099b6b14ebcebc13b
+.wordpress.com	TRUE	/	TRUE	1764547200	explat_test_aa_weekly_lohp_2025_week_41	control
+.wordpress.com	TRUE	/	TRUE	1764547200	tk_ai_explat	fddAAXwh3sdvXFf1QC4AP2iv
+.wordpress.com	TRUE	/	FALSE	1764547200	_fbp	fb.1.1759908083625.715989217841897746
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga_1H4VG5F5JF	GS2.1.s1759908083$o1$g1$t1759908105$j38$l0$h11422996
+.wordpress.com	TRUE	/	FALSE	1764547200	_parsely_visitor	{%22id%22:%22pid=6b3aeaa8-a585-4a43-a10b-151fdb09563e%22%2C%22session_count%22:1%2C%22last_session_ts%22:1759908083694}
+.wordpress.com	TRUE	/	FALSE	1764547200	_wpndash	2f668f9593c87e54223394bb
+.wordpress.com	TRUE	/	TRUE	1764547200	last_used_authentication_method	magic-login
+.wordpress.com	TRUE	/	TRUE	1764547200	recognized_logins	Rqq6PBLWDWwoXNuQ5lUVKvjWgI-oeUCBmZdqoJ_Aw4zeTwgTVBlToprDJAeVPur4FicvLv6gYKQjX3Yf5ILXIg%3D%3D
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress	floomeer%7C1854643678%7C3wwael5Lthf7XtC12RffnqZoMjzMGbcCeVrg7aadX0E%7Cdee9cc8da9008669c5a2d5c49233c162e829b37870052593c6fab28e9a4c9c60
+.wordpress.com	TRUE	/	TRUE	1764547200	wordpress_logged_in	floomeer%7C1854643678%7C3wwael5Lthf7XtC12RffnqZoMjzMGbcCeVrg7aadX0E%7Cf13b8b7b76d82e905ae433fe37c82ab9e93a110b055db34be9eb9d3d752ba0fc
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress_sec	floomeer%7C1854643678%7C3wwael5Lthf7XtC12RffnqZoMjzMGbcCeVrg7aadX0E%7C01020b1fb406ebfe7ba9ae9c2afec81f650b55ea137051432b837333f04a1ac5
+---------------------------
+
+E:\myNEW\my 19.10\ytwhite\ZA_105.233.224.10_2025-10-18 12_49_18_1H54HM3JVX6O8493HVJ\Browser\Cookies\Chrome_Default[5452a428].txt
+Email: valentinemamabolo@gmail.com | Sites: 2 | Primary Site: https://everydaywebsolutions.com
+---------------------------
+.wordpress.com	TRUE	/	FALSE	1764547200	_wpndash	e6b460f1eeaa69547c9d72dd
+.wordpress.com	TRUE	/	TRUE	1764547200	last_used_authentication_method	google
+.wordpress.com	TRUE	/	TRUE	1764547200	recognized_logins	ctgo7aq7ink4zsrBnBNy__EWRnV6exd7-8gTb_ZIhU_i_lgZF-Mf35E7HbPv_-Pyj8Zr9iKvGTIyoQL8P9meHw%3D%3D
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress	valentinemamabolo%7C1844363988%7CFiVcbmRWthl6TBpdrfDx7qWwnRP12ZCmCp0vvZR97V7%7C69d55c8e5dd70be9e9a4f07b88656893a891ead9e1c39053f8d197509f0085f6
+.wordpress.com	TRUE	/	TRUE	1764547200	wordpress_logged_in	valentinemamabolo%7C1844363988%7CFiVcbmRWthl6TBpdrfDx7qWwnRP12ZCmCp0vvZR97V7%7Cc9d692e529d5036be5e4c8e1aade573420ae6a5247236a4e3e1d7efb3dcf9643
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress_sec	valentinemamabolo%7C1844363988%7CFiVcbmRWthl6TBpdrfDx7qWwnRP12ZCmCp0vvZR97V7%7C6722f6fec8d44a3bd36436397030c63dcdce088694f5895d084022f44c0778ef
+.wordpress.com	TRUE	/	FALSE	1764547200	_fbp	fb.1.1749756070081.41930264474090458
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga	GA1.1.883607542.1749756069
+.wordpress.com	TRUE	/	FALSE	1764547200	_gcl_au	1.1.2068343762.1749756068
+.wordpress.com	TRUE	/	TRUE	1764547200	_rdt_uuid	1749756069979.3315a851-9049-4372-b219-313fe0254cd4
+.wordpress.com	TRUE	/	FALSE	1764547200	_uetvid	659beeb047c211f0b7444b3458f2534e
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga_1H4VG5F5JF	GS2.1.s1749756069$o1$g1$t1749756096$j33$l0$h0
+wordpress.com	FALSE	/	FALSE	1764547200	country_code	ZA
+wordpress.com	FALSE	/	FALSE	1764547200	region	Western%20Cape
+.public-api.wordpress.com	TRUE	/wp-admin/rest-proxy/	TRUE	1764547200	wp_api	8b1df68d18af4d63520a821d879a6242
+.public-api.wordpress.com	TRUE	/	TRUE	1764547200	wp_api_sec	valentinemamabolo%7C1844363988%7CFiVcbmRWthl6TBpdrfDx7qWwnRP12ZCmCp0vvZR97V7%7C6722f6fec8d44a3bd36436397030c63dcdce088694f5895d084022f44c0778ef
+public-api.wordpress.com	FALSE	/pinghub	TRUE	1764547200	wordpress_api_pinghub_jwt_35498467	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6InZhbGVudGluZW1hbWFib2xvfDE4NDQzNjM5ODh8RmlWY2JtUld0aGw2VEJwZHJmRHg3cVd3blJQMTJaQ21DcDB2dlpSOTdWNyJ9.eyJpc3MiOiJ3b3JkcHJlc3MuY29tIiwiaWF0IjoxNzU2NTc2NjgwLCJleHAiOjE3NTY3NDk0ODAsImF1ZCI6InBpbmdodWIiLCJzdWIiOiJ1c2VyOnZhbGVudGluZW1hbWFib2xvIn0.kUSLVs6r0-3hMHD1mVRxu6PGIxRtUrYNDk1O5UTBI7g
+---------------------------
+
+E:\myNEW\my 19.10\ytwhite\ZA_105.233.224.10_2025-10-18 12_49_18_1H54HM3JVX6O8493HVJ\Browser\Cookies\Chrome_Profile 1[ad453c44].txt
+Email: asandabrown23@gmail.com | Sites: 1 | Primary Site: http://yolandawritescom.wordpress.com
+---------------------------
+.wordpress.com	TRUE	/	FALSE	1764547200	_wpndash	a0a063d4e5c07d306c022f2a
+yolandawritescom.wordpress.com	FALSE	/	TRUE	1764547200	wp-settings-267401694	libraryContent%3Dbrowse
+yolandawritescom.wordpress.com	FALSE	/	TRUE	1764547200	wp-settings-time-267401694	1749748894
+.wordpress.com	TRUE	/	FALSE	1764547200	__ssid	86c4fa9ffa978de140d5ee8028f67d6
+.wordpress.com	TRUE	/	TRUE	1764547200	__stripe_mid	744aaaf5-c01b-4b3d-91a4-75c7536ecd6ba5db78
+.wordpress.com	TRUE	/	FALSE	1764547200	_parsely_visitor	{%22id%22:%22pid=db515ab2-8a7d-4c59-9021-0f41e45b4827%22%2C%22session_count%22:3%2C%22last_session_ts%22:1749755691703}
+.wordpress.com	TRUE	/	TRUE	1764547200	last_used_authentication_method	google
+.wordpress.com	TRUE	/	TRUE	1764547200	recognized_logins	IBCd21RSRG4q2RV0QzQBEqJzTJ6p_6v4Yk0W07qFa5f0bmYnYVhTaXOtftw4Ur8LvS0y-vdltB3kU7zzSPpjMQ%3D%3D
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress	asandabrown23%7C1851354793%7C4PZLvXYaGew4bimc9WqprsinDv8HNmxSdOeG5cdhSjm%7Cea63ee94a6ba0669db39cd8e8a2ba5ddb562c2a862538f86775bbe1920e5c333
+.wordpress.com	TRUE	/	TRUE	1764547200	wordpress_logged_in	asandabrown23%7C1851354793%7C4PZLvXYaGew4bimc9WqprsinDv8HNmxSdOeG5cdhSjm%7Ccd440523fa2761462c7eb9546bee37359932b857c54532b5c6f6392604ce2866
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress_sec	asandabrown23%7C1851354793%7C4PZLvXYaGew4bimc9WqprsinDv8HNmxSdOeG5cdhSjm%7Cc9ae0a17234a23328629969080d42611bccbbe4518fccfe5b4b67b6de2bd7f32
+.yolandawritescom.wordpress.com	TRUE	/	FALSE	1764547200	_ga	GA1.3.548739189.1749746813
+.yolandawritescom.wordpress.com	TRUE	/	FALSE	1764547200	_ga_46SXWPZP8L	GS2.3.s1756898785$o4$g0$t1756898785$j60$l0$h0
+.wordpress.com	TRUE	/	FALSE	1764547200	__utma	11735858.548739189.1749746813.1756747092.1757185411.2
+.wordpress.com	TRUE	/	FALSE	1764547200	__utmz	11735858.1757185411.2.2.utmcsr=wordpress.com|utmccn=(referral)|utmcmd=referral|utmcct=/
+.wordpress.com	TRUE	/	FALSE	1764547200	_fbp	fb.1.1749746812055.272111455727369464
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga_1H4VG5F5JF	GS2.1.s1757185398$o6$g1$t1757185409$j49$l0$h0
+.wordpress.com	TRUE	/	TRUE	1764547200	_rdt_uuid	1749746811949.e0016ee1-c235-40df-aea2-9a9f9d549e94
+.wordpress.com	TRUE	/	FALSE	1764547200	_uetvid	d79db68047ac11f0989cdfa25dd0ed19
+.wordpress.com	TRUE	/	FALSE	1764547200	cto_bidid	9wmE6F9lWXREcVlFUVREbzhqQnFZWU1hZ29lakN0V08xa3RxWUJ4SUtFMm0lMkJOMW5qRHcwY1hucTkzWXQ2S3IlMkYlMkJ4SnVsYzdoVlhKN1VWak9jaE9SYnQyOGpHNFVYR1BQZlhDM01sTjRaRzA4MVQ5TSUzRA
+.wordpress.com	TRUE	/	FALSE	1764547200	cto_bundle	xw60GF9lT2gzVmppOEtvaVBFNHJYOEh4VSUyRkpJVTlaSnZSZ05sYkJscDVsU2JHJTJGeDhnYmF5ZUdyTlE1cTBubjFRaEJrV1VrZzFyTWg2OTdLc0d1NEUweCUyQk04aFdDdmtOZkhqSjFXUXBKelJnWkxBWWc3ME9nQUJtaHp1aWw0R0ZBZ1owd0VKT3pqYmx4N01Lc3JIcUk5Y2RnVlElM0QlM0Q
+yolandawritescom.wordpress.com	FALSE	/	FALSE	1764547200	eucookielaw	1772737454979
+yolandawritescom.wordpress.com	FALSE	/	FALSE	1764547200	personalized-ads-consent	1772737454979
+---------------------------
+
+E:\myNEW\my17.10\captcha\captchalogs\IN_152.58.189.101_2025-10-16 6_43_39_1PO5LVL1L0VPGWINZQ9\Browser\Cookies\Chrome_Profile 1[feed7979].txt
+Email: vinsprabha2@gmail.com | Sites: 1 | Primary Site: http://vinsprabha2.wordpress.com
+---------------------------
+.wordpress.com	TRUE	/	FALSE	1764547200	ccpa_applies	false
+.wordpress.com	TRUE	/	FALSE	1764547200	usprivacy	1---
+.wordpress.com	TRUE	/	FALSE	1764547200	_wpndash	4b7d8445834363a316f47d84
+.wordpress.com	TRUE	/	TRUE	1764547200	last_used_authentication_method	google
+.wordpress.com	TRUE	/	TRUE	1764547200	recognized_logins	dYzCHhezsSC4HRShDrLjyJIBSb_tblG0cajTkcLC4haFDBCnBoCAbhdrUMGDXtFaxkVQWTqXnYw1wbJ3hpiz7A%3D%3D
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress	vinsprabha2%7C1839757268%7Ci3cDGAesyslfDindRvCXCnI5Ik3JmUkcfKBs3bwWzRS%7C2ca43fea0bf50ccf851c724c416e11ce119c76f808a185ec4167f5f9fc3a9455
+.wordpress.com	TRUE	/	TRUE	1764547200	wordpress_logged_in	vinsprabha2%7C1839757268%7Ci3cDGAesyslfDindRvCXCnI5Ik3JmUkcfKBs3bwWzRS%7Cb32e980f834f60a4bd528f49b0d293a49598120825ed52ef2d1aeb7aabc38223
+.wordpress.com	TRUE	/wp-admin	TRUE	1764547200	wordpress_sec	vinsprabha2%7C1839757268%7Ci3cDGAesyslfDindRvCXCnI5Ik3JmUkcfKBs3bwWzRS%7Cf822f315d56e6ff92d3b4f453aa382574a35661b5cba1ef5075078acdf158214
+.wordpress.com	TRUE	/	FALSE	1764547200	__ssid	7bbc134ac744daf181d48f131784bfa
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga	GA1.1.849741486.1745149277
+.wordpress.com	TRUE	/	FALSE	1764547200	_gcl_au	1.1.649744087.1745149276
+.wordpress.com	TRUE	/	TRUE	1764547200	_rdt_uuid	1745149277205.83d0731d-4b4e-4d22-b162-be162a04b7b2
+.vinsprabha2.wordpress.com	TRUE	/	FALSE	1764547200	_ga_46SXWPZP8L	GS1.3.1745149299.1.1.1745150121.0.0.0
+.vinsprabha2.wordpress.com	TRUE	/	FALSE	1764547200	_gid	GA1.3.766684544.1745149299
+vinsprabha2.wordpress.com	FALSE	/	TRUE	1764547200	wp-settings-time-263217550	1745150119
+.public-api.wordpress.com	TRUE	/wp-admin/rest-proxy/	TRUE	1764547200	wp_api	6e055ef2079c1f67447070b8cf22b600
+.public-api.wordpress.com	TRUE	/	TRUE	1764547200	wp_api_sec	vinsprabha2%7C1839757268%7Ci3cDGAesyslfDindRvCXCnI5Ik3JmUkcfKBs3bwWzRS%7Cf822f315d56e6ff92d3b4f453aa382574a35661b5cba1ef5075078acdf158214
+.wordpress.com	TRUE	/	TRUE	1764547200	__stripe_mid	ca9f08ca-6795-4de1-9f90-8e898094ee02acfa9f
+.wordpress.com	TRUE	/	FALSE	1764547200	_fbp	fb.1.1745149277299.700010558657698975
+.wordpress.com	TRUE	/	FALSE	1764547200	_uetsid	5f1492201ddc11f0b53b819247d5a398
+.wordpress.com	TRUE	/	FALSE	1764547200	_uetvid	5f1494501ddc11f09a12ab6361128471
+.wordpress.com	TRUE	/	FALSE	1764547200	_ga_1H4VG5F5JF	GS1.1.1745189192.2.0.1745189192.0.0.0
+---------------------------
+

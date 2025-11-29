@@ -30,13 +30,13 @@ export function FeaturesSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
       {features.map((feature, index) => {
         const Icon = feature.icon
         return (
           <div
             key={index}
-            className="group card-gradient rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:glow-effect hover:scale-105"
+            className={`group card-gradient rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:glow-effect hover:scale-105 animate-slide-up ${index === 0 ? "" : index === 1 ? "anim-delay-100" : index === 2 ? "anim-delay-200" : "anim-delay-300"}`}
           >
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
               <Icon className="w-7 h-7 text-primary" />

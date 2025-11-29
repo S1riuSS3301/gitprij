@@ -1,0 +1,3 @@
+{
+  "/api/lzt-webhook/route": "app/api/lzt-webhook/route.js"
+}

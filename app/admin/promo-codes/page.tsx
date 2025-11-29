@@ -1,4 +1,4 @@
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { DashboardHeader } from "@/components/support/dashboard-header"
 import { AdminSidebar } from "@/components/admin/admin-sidebar"
 import { PromoCodesManager } from "@/components/admin/promo-codes-manager"
 

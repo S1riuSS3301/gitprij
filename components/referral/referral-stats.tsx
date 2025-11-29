@@ -1,40 +1,89 @@
-import { Users, DollarSign, TrendingUp, Award } from "lucide-react"
+"use client"
 
-const stats = [
-  {
-    icon: Users,
-    label: "Приглашено пользователей",
-    value: "12",
-    change: "+3 за месяц",
-    positive: true,
-  },
-  {
-    icon: DollarSign,
-    label: "Заработано всего",
-    value: "$125.50",
-    change: "+$12.50 за неделю",
-    positive: true,
-  },
-  {
-    icon: TrendingUp,
-    label: "Средний доход",
-    value: "$10.46",
-    change: "На реферала",
-    positive: true,
-  },
-  {
-    icon: Award,
-    label: "Комиссия",
-    value: "10%",
-    change: "От пополнений рефералов",
-    positive: true,
-  },
-]
+import { Users, DollarSign, TrendingUp, Award } from "lucide-react"
+import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function ReferralStats() {
+  const [stats, setStats] = useState({
+    totalReferrals: 0,
+    totalEarnings: 0,
+    avgEarnings: 0,
+  })
+  const [loading, setLoading] = useState(true)
+  const { language } = useLanguage()
+
+  useEffect(() => {
+    const loadStats = async () => {
+      try {
+        const res = await fetch("/api/referrals", { cache: "no-store" })
+        if (res.ok) {
+          const data = await res.json()
+          setStats({
+            totalReferrals: data.totalReferrals || 0,
+            totalEarnings: data.totalEarnings || 0,
+            avgEarnings: data.totalReferrals > 0 ? (data.totalEarnings / data.totalReferrals) : 0,
+          })
+        }
+      } catch (error) {
+        console.error("Failed to load referral stats:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadStats()
+  }, [])
+
+  const statsData = [
+    {
+      icon: Users,
+      label: language === "ru" ? "Приглашено пользователей" : "Invited Users",
+      value: stats.totalReferrals.toString(),
+      change: language === "ru" ? "Активные рефералы" : "Active referrals",
+      positive: true,
+    },
+    {
+      icon: DollarSign,
+      label: language === "ru" ? "Заработано всего" : "Total Earned",
+      value: `$${stats.totalEarnings.toFixed(2)}`,
+      change: language === "ru" ? "Всего доходов" : "Total income",
+      positive: true,
+    },
+    {
+      icon: TrendingUp,
+      label: language === "ru" ? "Средний доход" : "Average Earnings",
+      value: `$${stats.avgEarnings.toFixed(2)}`,
+      change: language === "ru" ? "На реферала" : "Per referral",
+      positive: true,
+    },
+    {
+      icon: Award,
+      label: language === "ru" ? "Комиссия" : "Commission",
+      value: "10%",
+      change: language === "ru" ? "От пополнений рефералов" : "From referral top-ups",
+      positive: true,
+    },
+  ]
+  if (loading) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[1, 2, 3, 4].map((i) => (
+          <div
+            key={i}
+            className="card-gradient rounded-xl p-6 border border-border/50 animate-pulse"
+          >
+            <div className="h-12 w-12 rounded-lg bg-primary/20 mb-4" />
+            <div className="h-4 w-24 bg-muted/50 rounded mb-2" />
+            <div className="h-8 w-20 bg-muted/50 rounded" />
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {stats.map((stat, index) => {
+      {statsData.map((stat, index) => {
         const Icon = stat.icon
         return (
           <div

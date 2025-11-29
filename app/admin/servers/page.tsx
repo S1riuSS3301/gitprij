@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 import { getUser } from "@/lib/actions/auth"
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { DashboardHeader } from "@/components/support/dashboard-header"
 import { AdminSidebar } from "@/components/admin/admin-sidebar"
 import { ServerPlansManager } from "@/components/admin/server-plans-manager"
 

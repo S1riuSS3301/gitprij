@@ -7,12 +7,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Send } from "lucide-react"
 import { useState } from "react"
+import { useToast } from "@/hooks/use-toast"
 
 export function NotificationSender() {
   const [title, setTitle] = useState("")
   const [message, setMessage] = useState("")
   const [sendToSite, setSendToSite] = useState(true)
   const [sendToEmail, setSendToEmail] = useState(false)
+  const { toast } = useToast()
 
   return (
     <div className="card-gradient rounded-xl p-6 lg:p-8 border border-border/50">
@@ -69,7 +71,24 @@ export function NotificationSender() {
         </div>
 
         <div className="pt-4 border-t border-border/50">
-          <Button className="bg-primary hover:bg-primary/90 gap-2">
+          <Button
+            className="bg-primary hover:bg-primary/90 gap-2"
+            onClick={async () => {
+              if (!sendToSite) return
+              const res = await fetch("/api/notifications", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ title, message }),
+              })
+              if (res.ok) {
+                toast({ title: "Уведомление отправлено", description: "Оно появится у пользователей" })
+                setTitle("")
+                setMessage("")
+              } else {
+                toast({ title: "Ошибка", description: "Не удалось отправить уведомление", variant: "destructive" })
+              }
+            }}
+          >
             <Send className="w-4 h-4" />
             Отправить всем пользователям
           </Button>

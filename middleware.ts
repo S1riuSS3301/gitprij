@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { verifyToken } from "@/lib/jwt"
 
+// Update: export as "middleware" for Next.js compatibility
 export async function middleware(request: NextRequest) {
   const token = request.cookies.get("auth-token")?.value
   const { pathname } = request.nextUrl
@@ -24,7 +25,7 @@ export async function middleware(request: NextRequest) {
   }
 
   if (token) {
-    const payload = verifyToken(token)
+    const payload = await verifyToken(token)
 
     if (!payload) {
       // Invalid token, clear it and redirect to login if on protected route
@@ -34,7 +35,7 @@ export async function middleware(request: NextRequest) {
     }
 
     // Check admin access
-    if (isAdminRoute && payload.role !== "ADMIN") {
+    if (isAdminRoute && payload.role?.toLowerCase() !== "admin") {
       return NextResponse.redirect(new URL("/dashboard", request.url))
     }
 

@@ -1,12 +1,13 @@
 "use client"
 
+import { Suspense } from "react"
 import { RegisterForm } from "@/components/auth/register-form"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
-export default function RegisterPage() {
+function RegisterPageContent() {
   const { t } = useLanguage()
 
   return (
@@ -41,5 +42,13 @@ export default function RegisterPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={null}>
+      <RegisterPageContent />
+    </Suspense>
   )
 }

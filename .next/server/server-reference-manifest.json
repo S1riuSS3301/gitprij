@@ -1,0 +1,571 @@
+{
+  "node": {
+    "6022c80cd4e981877f43f4227f1f409d7c55804be4": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 78188,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/notifications/page": {
+          "moduleId": 12594,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 83339,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/payments/page": {
+          "moduleId": 73217,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/promo-codes/page": {
+          "moduleId": 83032,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/referrals/page": {
+          "moduleId": 51374,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/servers/page": {
+          "moduleId": 79653,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/users/page": {
+          "moduleId": 2336,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/auth/check-email/page": {
+          "moduleId": 62501,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/billing/page": {
+          "moduleId": 26205,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/buying/page": {
+          "moduleId": 28903,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": 99796,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/profile/page": {
+          "moduleId": 45401,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/referrals/page": {
+          "moduleId": 7787,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/servers/page": {
+          "moduleId": 32053,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/services/page": {
+          "moduleId": 41187,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/support/page": {
+          "moduleId": 36331,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/forgot-password/page": {
+          "moduleId": 66019,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": 20734,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": 37925,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 82430,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/register/page": {
+          "moduleId": 54431,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 50296,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "action-browser",
+        "app/admin/notifications/page": "action-browser",
+        "app/admin/page": "rsc",
+        "app/admin/payments/page": "action-browser",
+        "app/admin/promo-codes/page": "action-browser",
+        "app/admin/referrals/page": "action-browser",
+        "app/admin/servers/page": "rsc",
+        "app/admin/users/page": "action-browser",
+        "app/auth/check-email/page": "action-browser",
+        "app/dashboard/billing/page": "action-browser",
+        "app/dashboard/buying/page": "action-browser",
+        "app/dashboard/page": "action-browser",
+        "app/dashboard/profile/page": "rsc",
+        "app/dashboard/referrals/page": "action-browser",
+        "app/dashboard/servers/page": "action-browser",
+        "app/dashboard/services/page": "action-browser",
+        "app/dashboard/support/page": "action-browser",
+        "app/forgot-password/page": "action-browser",
+        "app/login/page": "action-browser",
+        "app/page": "action-browser",
+        "app/privacy/page": "action-browser",
+        "app/register/page": "action-browser",
+        "app/terms/page": "action-browser"
+      },
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts",
+      "exportedName": "signIn"
+    },
+    "00f65572580b2ecdd80a758bb37598a08e74e7cea3": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 78188,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/notifications/page": {
+          "moduleId": 12594,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 83339,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/payments/page": {
+          "moduleId": 73217,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/promo-codes/page": {
+          "moduleId": 83032,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/referrals/page": {
+          "moduleId": 51374,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/servers/page": {
+          "moduleId": 79653,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/users/page": {
+          "moduleId": 2336,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/auth/check-email/page": {
+          "moduleId": 62501,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/billing/page": {
+          "moduleId": 26205,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/buying/page": {
+          "moduleId": 28903,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": 99796,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/profile/page": {
+          "moduleId": 45401,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/referrals/page": {
+          "moduleId": 7787,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/servers/page": {
+          "moduleId": 32053,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/services/page": {
+          "moduleId": 41187,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/support/page": {
+          "moduleId": 36331,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/forgot-password/page": {
+          "moduleId": 66019,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": 20734,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": 37925,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 82430,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/register/page": {
+          "moduleId": 54431,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 50296,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "action-browser",
+        "app/admin/notifications/page": "action-browser",
+        "app/admin/page": "rsc",
+        "app/admin/payments/page": "action-browser",
+        "app/admin/promo-codes/page": "action-browser",
+        "app/admin/referrals/page": "action-browser",
+        "app/admin/servers/page": "rsc",
+        "app/admin/users/page": "action-browser",
+        "app/auth/check-email/page": "action-browser",
+        "app/dashboard/billing/page": "action-browser",
+        "app/dashboard/buying/page": "action-browser",
+        "app/dashboard/page": "action-browser",
+        "app/dashboard/profile/page": "rsc",
+        "app/dashboard/referrals/page": "action-browser",
+        "app/dashboard/servers/page": "action-browser",
+        "app/dashboard/services/page": "action-browser",
+        "app/dashboard/support/page": "action-browser",
+        "app/forgot-password/page": "action-browser",
+        "app/login/page": "action-browser",
+        "app/page": "action-browser",
+        "app/privacy/page": "action-browser",
+        "app/register/page": "action-browser",
+        "app/terms/page": "action-browser"
+      },
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts",
+      "exportedName": "signOut"
+    },
+    "787dde5be26b34864e2b887886b5ba77f14ae60fdb": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 78188,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/notifications/page": {
+          "moduleId": 12594,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 83339,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/payments/page": {
+          "moduleId": 73217,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/promo-codes/page": {
+          "moduleId": 83032,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/referrals/page": {
+          "moduleId": 51374,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/servers/page": {
+          "moduleId": 79653,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/users/page": {
+          "moduleId": 2336,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/auth/check-email/page": {
+          "moduleId": 62501,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/billing/page": {
+          "moduleId": 26205,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/buying/page": {
+          "moduleId": 28903,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": 99796,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/profile/page": {
+          "moduleId": 45401,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/referrals/page": {
+          "moduleId": 7787,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/servers/page": {
+          "moduleId": 32053,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/services/page": {
+          "moduleId": 41187,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/support/page": {
+          "moduleId": 36331,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/forgot-password/page": {
+          "moduleId": 66019,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": 20734,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": 37925,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 82430,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/register/page": {
+          "moduleId": 54431,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 50296,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "action-browser",
+        "app/admin/notifications/page": "action-browser",
+        "app/admin/page": "rsc",
+        "app/admin/payments/page": "action-browser",
+        "app/admin/promo-codes/page": "action-browser",
+        "app/admin/referrals/page": "action-browser",
+        "app/admin/servers/page": "rsc",
+        "app/admin/users/page": "action-browser",
+        "app/auth/check-email/page": "action-browser",
+        "app/dashboard/billing/page": "action-browser",
+        "app/dashboard/buying/page": "action-browser",
+        "app/dashboard/page": "action-browser",
+        "app/dashboard/profile/page": "rsc",
+        "app/dashboard/referrals/page": "action-browser",
+        "app/dashboard/servers/page": "action-browser",
+        "app/dashboard/services/page": "action-browser",
+        "app/dashboard/support/page": "action-browser",
+        "app/forgot-password/page": "action-browser",
+        "app/login/page": "action-browser",
+        "app/page": "action-browser",
+        "app/privacy/page": "action-browser",
+        "app/register/page": "action-browser",
+        "app/terms/page": "action-browser"
+      },
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts",
+      "exportedName": "signUp"
+    },
+    "00c6e4a55250d670e9232ae1a24c5ac79dfccdc058": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": 83339,
+          "async": false,
+          "exportedName": "getUserProfile",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/servers/page": {
+          "moduleId": 79653,
+          "async": false,
+          "exportedName": "getUserProfile",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/profile/page": {
+          "moduleId": 45401,
+          "async": false,
+          "exportedName": "getUserProfile",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/admin/servers/page": "rsc",
+        "app/dashboard/profile/page": "rsc"
+      },
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts",
+      "exportedName": "getUserProfile"
+    },
+    "00f039e0e43c836a057d4a1a32918a1378f603b767": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": 83339,
+          "async": false,
+          "exportedName": "getUser",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/admin/servers/page": {
+          "moduleId": 79653,
+          "async": false,
+          "exportedName": "getUser",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        },
+        "app/dashboard/profile/page": {
+          "moduleId": 45401,
+          "async": false,
+          "exportedName": "getUser",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/admin/servers/page": "rsc",
+        "app/dashboard/profile/page": "rsc"
+      },
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts",
+      "exportedName": "getUser"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "btgRYfco4gdBNuhO0e1iDVkkXm3xUdi8T7bfctGAOTU="
+}

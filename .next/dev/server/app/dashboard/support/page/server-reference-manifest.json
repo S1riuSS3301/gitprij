@@ -1,0 +1,50 @@
+{
+  "node": {
+    "6019108e014b4cba68c694acc8ad8ac8f2420cc76f": {
+      "workers": {
+        "app/dashboard/support/page": {
+          "moduleId": "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/.next-internal/server/app/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/support/page": "action-browser"
+      },
+      "exportedName": "signIn",
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+    },
+    "0059722a90b92d9b1dfed289de8123cb25bee8c250": {
+      "workers": {
+        "app/dashboard/support/page": {
+          "moduleId": "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/.next-internal/server/app/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/support/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+    },
+    "78421d135addc4c411a79870d1f87f2389ffff14ca": {
+      "workers": {
+        "app/dashboard/support/page": {
+          "moduleId": "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/.next-internal/server/app/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/support/page": "action-browser"
+      },
+      "exportedName": "signUp",
+      "filename": "Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/lib/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

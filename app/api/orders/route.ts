@@ -42,12 +42,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Server plan not found" }, { status: 404 })
     }
 
-    // Calculate price based on billing period
-    let pricePaid = plan.priceMonthly
+    // Calculate price based on billing period (base: monthly price)
+    let pricePaid = plan.price
     if (billing_period === "quarterly") {
-      pricePaid = plan.priceMonthly * 3 * 0.95 // 5% discount
+      pricePaid = plan.price * 3 * 0.95 // 5% discount
     } else if (billing_period === "yearly") {
-      pricePaid = plan.priceMonthly * 12 * 0.9 // 10% discount
+      pricePaid = plan.price * 12 * 0.9 // 10% discount
     }
 
     // Calculate expiration date
@@ -60,18 +60,44 @@ export async function POST(request: Request) {
       expiresAt.setFullYear(expiresAt.getFullYear() + 1)
     }
 
-    const order = await db.order.create({
-      data: {
-        userId: authUser.userId,
-        serverPlanId: server_plan_id,
-        pricePaid,
-        billingPeriod: billing_period || "monthly",
-        serverName: server_name || `Server ${Date.now()}`,
-        status: "active",
-        expiresAt,
-      },
-    })
+    // Получаем профиль пользователя
+    const profile = await db.profile.findUnique({ where: { userId: authUser.userId } })
+    if (!profile) {
+      return NextResponse.json({ error: "Profile not found" }, { status: 403 })
+    }
+    if (profile.balance < pricePaid) {
+      return NextResponse.json({ error: "Недостаточно средств на балансе" }, { status: 402 })
+    }
 
+    // Всё делаем в транзакции: списание, создание заказа, транзакция-история
+    const [order] = await db.$transaction([
+      db.profile.update({
+        where: { userId: authUser.userId },
+        data: { balance: { decrement: pricePaid } },
+      }),
+      db.order.create({
+        data: {
+          userId: authUser.userId,
+          serverPlanId: server_plan_id,
+          pricePaid,
+          billingPeriod: billing_period || "monthly",
+          serverName: server_name || `Server ${Date.now()}`,
+          status: "active",
+          expiresAt,
+        },
+      }),
+      db.transaction.create({
+        data: {
+          userId: authUser.userId,
+          amount: -pricePaid,
+          currency: "USD",
+          method: "balance",
+          status: "completed",
+          description: `Оплата сервера (${server_plan_id}) через баланс`,
+          type: "purchase"
+        },
+      }),
+    ])
     return NextResponse.json(order)
   } catch (error) {
     console.error("[v0] Error creating order:", error)

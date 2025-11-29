@@ -9,6 +9,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
 
+import logo from "@/public/logovds.jpg"
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
@@ -24,9 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "VDS_HUB - Premium Virtual Server Hosting",
+  title: "VDS HUB - Premium Virtual Server Hosting",
   description: "Professional VDS/VPS hosting with flexible configurations and competitive pricing",
-  generator: "v0.app",
+  generator: "",
 }
 
 export default function RootLayout({
@@ -36,6 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        {/* Replace the existing favicon with the .ico file */}
+        <link rel="icon" type="image/x-icon" href="/logovds-removebg-preview.ico" />
+      </head>
       <body className="font-sans antialiased">
         <LanguageProvider>
           <CurrencyProvider>

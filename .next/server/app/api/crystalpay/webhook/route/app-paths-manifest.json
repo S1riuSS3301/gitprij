@@ -1,0 +1,3 @@
+{
+  "/api/crystalpay/webhook/route": "app/api/crystalpay/webhook/route.js"
+}
