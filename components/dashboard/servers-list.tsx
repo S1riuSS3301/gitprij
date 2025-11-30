@@ -2,10 +2,17 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Server, MoreVertical } from "lucide-react"
+import { Server, MoreVertical, Power, RotateCcw, Key, RefreshCw } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { useLanguage } from "@/contexts/language-context"
 import { useCurrency } from "@/contexts/currency-context"
 import { useEffect, useState } from "react"
+import { toast } from "sonner"
 
 interface ServerOrder {
   id: string
@@ -23,6 +30,7 @@ export function ServersList() {
   const { formatPrice, convertPrice } = useCurrency()
   const [servers, setServers] = useState<ServerOrder[]>([])
   const [plans, setPlans] = useState<any[]>([])
+  const [loadingActions, setLoadingActions] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     fetch('/api/orders', { cache: 'no-store' })
@@ -35,6 +43,48 @@ export function ServersList() {
 
   const getPlan = (planId: string) => {
     return plans.find((p) => p.id === planId)
+  }
+
+  const handleServerAction = async (action: string, orderId: string, additionalData?: any) => {
+    setLoadingActions(prev => ({ ...prev, [`${action}-${orderId}`]: true }))
+
+    try {
+      const response = await fetch('/api/vmmanager', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action, orderId, ...additionalData })
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast.success(
+          language === 'ru'
+            ? `Действие "${action}" выполнено успешно`
+            : `Action "${action}" completed successfully`
+        )
+        // Обновить список серверов
+        const res = await fetch('/api/orders', { cache: 'no-store' })
+        if (res.ok) {
+          const data = await res.json()
+          setServers(data || [])
+        }
+      } else {
+        toast.error(
+          language === 'ru'
+            ? `Ошибка выполнения действия: ${data.error || 'Неизвестная ошибка'}`
+            : `Action failed: ${data.error || 'Unknown error'}`
+        )
+      }
+    } catch (error) {
+      toast.error(
+        language === 'ru'
+          ? 'Ошибка сети при выполнении действия'
+          : 'Network error during action'
+      )
+    } finally {
+      setLoadingActions(prev => ({ ...prev, [`${action}-${orderId}`]: false }))
+    }
   }
 
   return (
@@ -75,7 +125,56 @@ export function ServersList() {
                     <Badge variant={server.status === "active" ? "default" : "secondary"} className="capitalize">
                       {server.status === "active" ? t("servers.running") : t("servers.stopped")}
                     </Badge>
-                    {/* Удалены действия управления сервером */}
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="sm">
+                          <MoreVertical className="w-4 h-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem
+                          onClick={() => handleServerAction('reboot', server.id)}
+                          disabled={loadingActions[`reboot-${server.id}`]}
+                          className="gap-2"
+                        >
+                          <RotateCcw className="w-4 h-4" />
+                          {loadingActions[`reboot-${server.id}`] ? (
+                            <RefreshCw className="w-4 h-4 animate-spin" />
+                          ) : (
+                            language === 'ru' ? 'Перезагрузить' : 'Reboot'
+                          )}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => handleServerAction('power_off', server.id)}
+                          disabled={loadingActions[`power_off-${server.id}`]}
+                          className="gap-2"
+                        >
+                          <Power className="w-4 h-4" />
+                          {loadingActions[`power_off-${server.id}`] ? (
+                            <RefreshCw className="w-4 h-4 animate-spin" />
+                          ) : (
+                            language === 'ru' ? 'Выключить' : 'Power Off'
+                          )}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => {
+                            const newPassword = prompt(language === 'ru' ? 'Введите новый пароль:' : 'Enter new password:')
+                            if (newPassword) {
+                              handleServerAction('change_password', server.id, { newPassword })
+                            }
+                          }}
+                          disabled={loadingActions[`change_password-${server.id}`]}
+                          className="gap-2"
+                        >
+                          <Key className="w-4 h-4" />
+                          {loadingActions[`change_password-${server.id}`] ? (
+                            <RefreshCw className="w-4 h-4 animate-spin" />
+                          ) : (
+                            language === 'ru' ? 'Сменить пароль' : 'Change Password'
+                          )}
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   </div>
                 </div>
 
