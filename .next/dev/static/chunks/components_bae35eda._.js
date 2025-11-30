@@ -78,9 +78,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/contexts/language-context.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -155,185 +157,35 @@ function Header() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
                         className: "flex items-center",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                            initial: {
-                                scale: 0.95,
-                                rotate: -5,
-                                opacity: 0.9
-                            },
-                            animate: {
-                                scale: [
-                                    0.95,
-                                    1.05,
-                                    0.98,
-                                    1
-                                ],
-                                rotate: [
-                                    -5,
-                                    3,
-                                    -1,
-                                    0
-                                ],
-                                opacity: 1,
-                                filter: [
-                                    "brightness(0.98) drop-shadow(0 0 2px #8c6cfa55)",
-                                    "brightness(1.08) drop-shadow(0 0 12px #ac94fbcc)",
-                                    "brightness(1.04) drop-shadow(0 0 8px #8c6cfa55)",
-                                    "brightness(1.06) drop-shadow(0 0 18px #8c6cfa66)"
-                                ]
-                            },
-                            transition: {
-                                duration: 0.9,
-                                ease: "easeInOut"
-                            },
-                            whileHover: {
-                                scale: 1.05,
-                                rotate: 0.5,
-                                filter: "brightness(1.1) drop-shadow(0 0 16px #8c6cfacc)",
-                                transition: {
-                                    duration: 0.3,
-                                    ease: "easeOut"
-                                }
-                            },
-                            className: "outline-none",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                width: 44,
-                                height: 44,
-                                viewBox: "0 0 44 44",
-                                fill: "none",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                className: "block",
-                                style: {
-                                    filter: "drop-shadow(0 0 18px #8c6cfa33)"
-                                },
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("radialGradient", {
-                                        id: "logo-glow",
-                                        cx: "50%",
-                                        cy: "50%",
-                                        r: "50%",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
-                                                offset: "0%",
-                                                stopColor: "#8c6cfa",
-                                                stopOpacity: "0.25"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/header.tsx",
-                                                lineNumber: 93,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
-                                                offset: "100%",
-                                                stopColor: "#fff",
-                                                stopOpacity: "0"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/header.tsx",
-                                                lineNumber: 94,
-                                                columnNumber: 19
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/header.tsx",
-                                        lineNumber: 92,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                                        cx: "22",
-                                        cy: "22",
-                                        r: "21",
-                                        fill: "url(#logo-glow)"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/header.tsx",
-                                        lineNumber: 96,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                                        cx: "22",
-                                        cy: "22",
-                                        r: "17",
-                                        fill: "#18103a",
-                                        stroke: "#8c6cfa",
-                                        strokeWidth: "2.6"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/header.tsx",
-                                        lineNumber: 97,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
-                                        x: "50%",
-                                        y: "56%",
-                                        textAnchor: "middle",
-                                        fill: "#8c6cfa",
-                                        fontSize: "16",
-                                        fontWeight: "bold",
-                                        fontFamily: "inherit",
-                                        letterSpacing: "2",
-                                        filter: "url(#svgshadow)",
-                                        style: {
-                                            textShadow: "0 0 10px #8c6cfa44, 0 1px 0 black"
-                                        },
-                                        dominantBaseline: "middle",
-                                        children: "VDS"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/header.tsx",
-                                        lineNumber: 98,
-                                        columnNumber: 17
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/header.tsx",
-                                lineNumber: 83,
-                                columnNumber: 15
-                            }, this)
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/logo-vds-hub.png",
+                            alt: "VDS Hub Logo",
+                            width: 94,
+                            height: 94,
+                            className: "block",
+                            style: {
+                                filter: "drop-shadow(0 0 18px #8c6cfa33)"
+                            }
                         }, void 0, false, {
                             fileName: "[project]/components/header.tsx",
-                            lineNumber: 58,
-                            columnNumber: 13
+                            lineNumber: 60,
+                            columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/header.tsx",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/header.tsx",
-                    lineNumber: 56,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 flex ml-[44px]",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/",
-                        className: "flex items-center gap-3 group select-none",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                            initial: {
-                                opacity: 0.6,
-                                x: -5
-                            },
-                            animate: {
-                                opacity: 1,
-                                x: 0
-                            },
-                            transition: {
-                                delay: 0.3,
-                                duration: 0.5,
-                                type: "spring"
-                            },
-                            className: "hidden md:inline-block font-black tracking-tight text-xl text-primary group-hover:text-accent transition-colors duration-300 ease-in-out",
-                            children: "VDS Hosting"
-                        }, void 0, false, {
-                            fileName: "[project]/components/header.tsx",
-                            lineNumber: 120,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/header.tsx",
-                        lineNumber: 119,
-                        columnNumber: 11
-                    }, this)
+                    className: "flex-1 flex ml-[44px]"
                 }, void 0, false, {
                     fileName: "[project]/components/header.tsx",
-                    lineNumber: 118,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -352,26 +204,30 @@ function Header() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                             variant: "outline",
                             size: "sm",
-                            className: "hidden sm:inline-flex rounded-full px-4 py-2 border font-semibold border-primary/40 bg-primary/5 hover:bg-primary/15 hover:shadow-md transition-all duration-300 ease-out text-sm",
+                            className: "hidden sm:inline-flex rounded-full px-4 py-2 border font-semibold border-primary/40 bg-primary/5 transition-all duration-300 ease-out text-sm",
                             onClick: ()=>setLanguage(language === "ru" ? "en" : "ru"),
                             children: language === "ru" ? "RU" : "EN"
                         }, void 0, false, {
                             fileName: "[project]/components/header.tsx",
-                            lineNumber: 137,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, this),
                         isAuthenticated && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "hidden sm:flex items-center gap-3",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    className: "flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border shadow-sm border-primary/25 text-base font-semibold hover:bg-gradient-to-r hover:from-primary/25 hover:to-accent/25 transition-all duration-300",
-                                    whileHover: {
-                                        scale: 1.03,
-                                        boxShadow: "0 0 8px #8c6cfa55"
+                                    className: "flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border shadow-sm border-primary/25 text-base font-semibold transition-all duration-300",
+                                    animate: {
+                                        boxShadow: [
+                                            "0 0 8px #8c6cfa55",
+                                            "0 0 12px #ac94fbcc",
+                                            "0 0 8px #8c6cfa55"
+                                        ]
                                     },
                                     transition: {
-                                        duration: 0.3,
-                                        ease: "easeOut"
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        repeatType: "reverse"
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWallet"], {
@@ -379,7 +235,7 @@ function Header() {
                                             size: 17
                                         }, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 99,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -387,7 +243,7 @@ function Header() {
                                             children: language === "ru" ? "Баланс" : "Balance"
                                         }, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 100,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -398,29 +254,33 @@ function Header() {
                                             }).format(balance ?? 0)
                                         }, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 101,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/header.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 94,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    className: "flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/30 border shadow-sm border-secondary/25 text-base text-foreground font-semibold hover:bg-secondary/40 transition-all duration-300",
-                                    whileHover: {
-                                        scale: 1.03,
-                                        boxShadow: "0 0 8px #8c6cfa55"
+                                    className: "flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/30 border shadow-sm border-secondary/25 text-base text-foreground font-semibold transition-all duration-300",
+                                    animate: {
+                                        boxShadow: [
+                                            "0 0 8px #8c6cfa55",
+                                            "0 0 12px #ac94fbcc",
+                                            "0 0 8px #8c6cfa55"
+                                        ]
                                     },
                                     transition: {
-                                        duration: 0.3,
-                                        ease: "easeOut"
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        repeatType: "reverse"
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaServer"], {}, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 110,
                                             columnNumber: 17
                                         }, this),
                                         " ",
@@ -431,26 +291,22 @@ function Header() {
                                             children: serversCount
                                         }, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 110,
                                             columnNumber: 67
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/header.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 105,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/header.tsx",
-                            lineNumber: 146,
+                            lineNumber: 93,
                             columnNumber: 13
                         }, this),
                         isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                            whileHover: {
-                                scale: 1.03,
-                                boxShadow: "0 0 12px #8c6cfa77"
-                            },
                             transition: {
                                 duration: 0.3,
                                 ease: "easeOut"
@@ -459,13 +315,13 @@ function Header() {
                                 href: "/dashboard",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                     size: "sm",
-                                    className: "rounded-full px-5 py-2 bg-primary hover:bg-primary/95 text-white font-extrabold shadow-md hover:shadow-lg text-base transition-all duration-300 border border-primary/70 flex gap-2 items-center",
+                                    className: "rounded-full px-5 py-2 bg-primary text-white font-extrabold shadow-md text-base transition-all duration-300 border border-primary/70 flex gap-2 items-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaThLarge"], {
                                             size: 17
                                         }, void 0, false, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 121,
                                             columnNumber: 19
                                         }, this),
                                         " ",
@@ -473,25 +329,21 @@ function Header() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/header.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 117,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/header.tsx",
-                                lineNumber: 169,
+                                lineNumber: 116,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/header.tsx",
-                            lineNumber: 168,
+                            lineNumber: 115,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    whileHover: {
-                                        scale: 1.03,
-                                        boxShadow: "0 0 8px #8c6cfa55"
-                                    },
                                     transition: {
                                         duration: 0.3,
                                         ease: "easeOut"
@@ -501,13 +353,13 @@ function Header() {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                             variant: "outline",
                                             size: "sm",
-                                            className: "rounded-full px-4 py-2 font-bold border border-primary/25 bg-transparent hover:bg-secondary/5 hover:shadow-md transition-all duration-300 text-sm flex gap-2 items-center",
+                                            className: "rounded-full px-4 py-2 font-bold border border-primary/25 bg-transparent transition-all duration-300 text-sm flex gap-2 items-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaSignInAlt"], {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/header.tsx",
-                                                    lineNumber: 187,
+                                                    lineNumber: 134,
                                                     columnNumber: 21
                                                 }, this),
                                                 " ",
@@ -515,24 +367,20 @@ function Header() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 182,
+                                            lineNumber: 129,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/header.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/header.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 127,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    whileHover: {
-                                        scale: 1.03,
-                                        boxShadow: "0 0 12px #8c6cfa77"
-                                    },
                                     transition: {
                                         duration: 0.3,
                                         ease: "easeOut"
@@ -541,13 +389,13 @@ function Header() {
                                         href: "/register",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                             size: "sm",
-                                            className: "rounded-full px-5 py-2 bg-primary hover:bg-primary/95 text-white font-extrabold border border-primary/70 shadow-md hover:shadow-lg text-base transition-all duration-300 flex gap-2 items-center",
+                                            className: "rounded-full px-5 py-2 bg-primary text-white font-extrabold border border-primary/70 shadow-md text-base transition-all duration-300 flex gap-2 items-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaUserPlus"], {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/header.tsx",
-                                                    lineNumber: 197,
+                                                    lineNumber: 144,
                                                     columnNumber: 21
                                                 }, this),
                                                 " ",
@@ -555,17 +403,17 @@ function Header() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/header.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 140,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/header.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 139,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/header.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 138,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -573,18 +421,18 @@ function Header() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/header.tsx",
-                    lineNumber: 131,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/header.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/header.tsx",
-        lineNumber: 48,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -1174,122 +1022,509 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+// Изменили billingPeriods: оставили только "month"
 const billingPeriods = [
-    "hour",
-    "month",
-    "3months",
-    "year"
+    "month"
 ];
-const serverPlans = [
+// DDR5 PLANS
+const serverPlansDDR5 = [
     {
-        name: "1 vCore",
-        cores: 1,
+        name: "2 vCore DDR5",
+        cores: 2,
         ram: 2,
-        storage: 30,
+        storage: 35,
+        ramType: "DDR5",
         prices: {
-            hour: 0.05,
-            month: 1.6,
-            "3months": 4.5,
-            year: 16
-        }
+            month: 6,
+            hour: 0.02
+        },
+        nvme: false
     },
     {
-        name: "2 vCore",
+        name: "2 vCore DDR5",
         cores: 2,
         ram: 4,
-        storage: 45,
+        storage: 55,
+        ramType: "DDR5",
         prices: {
-            hour: 0.17,
-            month: 5,
-            "3months": 14,
-            year: 50
-        }
+            month: 10,
+            hour: 0.03
+        },
+        nvme: false
     },
     {
-        name: "3 vCore",
-        cores: 3,
+        name: "4 vCore DDR5",
+        cores: 4,
         ram: 6,
-        storage: 70,
+        storage: 85,
+        ramType: "DDR5",
         prices: {
-            hour: 0.23,
-            month: 7,
-            "3months": 20,
-            year: 70
-        }
+            month: 18,
+            hour: 0.04
+        },
+        nvme: false
     },
     {
-        name: "4 vCore",
+        name: "4 vCore DDR5",
         cores: 4,
         ram: 8,
-        storage: 80,
+        storage: 115,
+        ramType: "DDR5",
         prices: {
-            hour: 0.37,
-            month: 11,
-            "3months": 31,
-            year: 110
+            month: 23,
+            hour: 0.05
         },
-        popular: true
+        nvme: false
     },
     {
-        name: "6 vCore",
+        name: "5 vCore DDR5",
+        cores: 5,
+        ram: 10,
+        storage: 155,
+        ramType: "DDR5",
+        prices: {
+            month: 29,
+            hour: 0.07
+        },
+        nvme: false
+    },
+    {
+        name: "6 vCore DDR5",
         cores: 6,
         ram: 12,
-        storage: 110,
+        storage: 185,
+        ramType: "DDR5",
         prices: {
-            hour: 0.5,
-            month: 15,
-            "3months": 42,
-            year: 150
-        }
+            month: 35,
+            hour: 0.09
+        },
+        nvme: false
     },
     {
-        name: "8 vCore",
+        name: "8 vCore DDR5",
         cores: 8,
         ram: 16,
-        storage: 140,
+        storage: 275,
+        ramType: "DDR5",
         prices: {
-            hour: 0.63,
-            month: 19,
-            "3months": 53,
-            year: 190
-        }
+            month: 49,
+            hour: 0.11
+        },
+        nvme: false
     },
     {
-        name: "8 vCore Pro",
-        cores: 8,
-        ram: 32,
-        storage: 220,
+        name: "10 vCore DDR5",
+        cores: 10,
+        ram: 20,
+        storage: 325,
+        ramType: "DDR5",
         prices: {
-            hour: 0.9,
-            month: 26,
-            "3months": 73,
-            year: 260
-        }
+            month: 60,
+            hour: 0.13
+        },
+        nvme: false
     },
     {
-        name: "12 vCore",
+        name: "12 vCore DDR5",
         cores: 12,
         ram: 24,
-        storage: 250,
+        storage: 365,
+        ramType: "DDR5",
         prices: {
-            hour: 1.25,
-            month: 36,
-            "3months": 101,
-            year: 360
-        }
+            month: 75,
+            hour: 0.16
+        },
+        nvme: false
+    },
+    {
+        name: "14 vCore DDR5",
+        cores: 14,
+        ram: 28,
+        storage: 400,
+        ramType: "DDR5",
+        prices: {
+            month: 88,
+            hour: 0.18
+        },
+        nvme: false
+    },
+    {
+        name: "16 vCore DDR5",
+        cores: 16,
+        ram: 32,
+        storage: 500,
+        ramType: "DDR5",
+        prices: {
+            month: 99,
+            hour: 0.2
+        },
+        nvme: false,
+        cpu: "Dual EPYC 7702"
     }
+];
+// DDR4 PLANS
+const serverPlansDDR4 = [
+    {
+        name: "2 vCore DDR4",
+        cores: 2,
+        ram: 2,
+        storage: 35,
+        ramType: "DDR4",
+        prices: {
+            month: 4,
+            hour: 0.02
+        },
+        nvme: true
+    },
+    {
+        name: "2 vCore DDR4",
+        cores: 2,
+        ram: 4,
+        storage: 55,
+        ramType: "DDR4",
+        prices: {
+            month: 6,
+            hour: 0.04
+        },
+        nvme: true
+    },
+    {
+        name: "3 vCore DDR4",
+        cores: 3,
+        ram: 4,
+        storage: 65,
+        ramType: "DDR4",
+        prices: {
+            month: 8,
+            hour: 0.05
+        },
+        nvme: true
+    },
+    {
+        name: "4 vCore DDR4",
+        cores: 4,
+        ram: 6,
+        storage: 85,
+        ramType: "DDR4",
+        prices: {
+            month: 11,
+            hour: 0.06
+        },
+        nvme: true
+    },
+    {
+        name: "4 vCore DDR4",
+        cores: 4,
+        ram: 8,
+        storage: 115,
+        ramType: "DDR4",
+        prices: {
+            month: 15,
+            hour: 0.08
+        },
+        nvme: true
+    },
+    {
+        name: "5 vCore DDR4",
+        cores: 5,
+        ram: 10,
+        storage: 140,
+        ramType: "DDR4",
+        prices: {
+            month: 18,
+            hour: 0.09
+        },
+        nvme: true
+    },
+    {
+        name: "6 vCore DDR4",
+        cores: 6,
+        ram: 12,
+        storage: 160,
+        ramType: "DDR4",
+        prices: {
+            month: 22,
+            hour: 0.12
+        },
+        nvme: true
+    },
+    {
+        name: "8 vCore DDR4",
+        cores: 8,
+        ram: 16,
+        storage: 200,
+        ramType: "DDR4",
+        prices: {
+            month: 26,
+            hour: 0.14
+        },
+        nvme: true
+    },
+    {
+        name: "10 vCore DDR4",
+        cores: 10,
+        ram: 20,
+        storage: 250,
+        ramType: "DDR4",
+        prices: {
+            month: 32,
+            hour: 0.18
+        },
+        nvme: true
+    },
+    {
+        name: "12 vCore DDR4",
+        cores: 12,
+        ram: 24,
+        storage: 300,
+        ramType: "DDR4",
+        prices: {
+            month: 36,
+            hour: 0.22
+        },
+        nvme: true
+    },
+    {
+        name: "14 vCore DDR4",
+        cores: 14,
+        ram: 28,
+        storage: 300,
+        ramType: "DDR4",
+        prices: {
+            month: 40,
+            hour: 0.26
+        },
+        nvme: true
+    },
+    {
+        name: "16 vCore DDR4",
+        cores: 16,
+        ram: 32,
+        storage: 300,
+        ramType: "DDR4",
+        prices: {
+            month: 47,
+            hour: 0.31
+        },
+        nvme: true
+    },
+    {
+        name: "20 vCore DDR4",
+        cores: 20,
+        ram: 40,
+        storage: 300,
+        ramType: "DDR4",
+        prices: {
+            month: 55,
+            hour: 0.37
+        },
+        nvme: true
+    },
+    {
+        name: "24 vCore DDR4",
+        cores: 24,
+        ram: 48,
+        storage: 350,
+        ramType: "DDR4",
+        prices: {
+            month: 62,
+            hour: 0.45
+        },
+        nvme: true
+    },
+    {
+        name: "28 vCore DDR4",
+        cores: 28,
+        ram: 56,
+        storage: 400,
+        ramType: "DDR4",
+        prices: {
+            month: 71,
+            hour: 0.53
+        },
+        nvme: true
+    },
+    {
+        name: "32 vCore DDR4",
+        cores: 32,
+        ram: 64,
+        storage: 450,
+        ramType: "DDR4",
+        prices: {
+            month: 85,
+            hour: 0.61
+        },
+        nvme: true
+    },
+    {
+        name: "36 vCore DDR4",
+        cores: 36,
+        ram: 72,
+        storage: 500,
+        ramType: "DDR4",
+        prices: {
+            month: 100,
+            hour: 0.73
+        },
+        nvme: true
+    },
+    {
+        name: "48 vCore DDR4",
+        cores: 48,
+        ram: 96,
+        storage: 600,
+        ramType: "DDR4",
+        prices: {
+            month: 138,
+            hour: 1.03
+        },
+        nvme: true
+    },
+    {
+        name: "56 vCore DDR4",
+        cores: 56,
+        ram: 112,
+        storage: 650,
+        ramType: "DDR4",
+        prices: {
+            month: 156,
+            hour: 1.24
+        },
+        nvme: true
+    },
+    {
+        name: "64 vCore DDR4",
+        cores: 64,
+        ram: 128,
+        storage: 700,
+        ramType: "DDR4",
+        prices: {
+            month: 175,
+            hour: 1.52
+        },
+        nvme: true
+    },
+    {
+        name: "72 vCore DDR4",
+        cores: 72,
+        ram: 128,
+        storage: 700,
+        ramType: "DDR4",
+        prices: {
+            month: 201,
+            hour: 1.86
+        },
+        nvme: true
+    },
+    {
+        name: "80 vCore DDR4",
+        cores: 80,
+        ram: 132,
+        storage: 750,
+        ramType: "DDR4",
+        prices: {
+            month: 265,
+            hour: 2.25
+        },
+        nvme: true
+    },
+    {
+        name: "88 vCore DDR4",
+        cores: 88,
+        ram: 156,
+        storage: 800,
+        ramType: "DDR4",
+        prices: {
+            month: 289,
+            hour: 2.77
+        },
+        nvme: true
+    },
+    {
+        name: "96 vCore DDR4",
+        cores: 96,
+        ram: 192,
+        storage: 900,
+        ramType: "DDR4",
+        prices: {
+            month: 326,
+            hour: 3.36
+        },
+        nvme: true
+    },
+    {
+        name: "112 vCore DDR4",
+        cores: 112,
+        ram: 224,
+        storage: 1024,
+        ramType: "DDR4",
+        prices: {
+            month: 395,
+            hour: 5.72
+        },
+        nvme: true
+    },
+    {
+        name: "128 vCore DDR4",
+        cores: 128,
+        ram: 256,
+        storage: 1024,
+        ramType: "DDR4",
+        prices: {
+            month: 445,
+            hour: 8.20
+        },
+        nvme: true
+    }
+];
+// Combine plans for display (DDR5 first, then DDR4)
+const serverPlans = [
+    ...serverPlansDDR5,
+    ...serverPlansDDR4
 ];
 function ServerConfigurator() {
     _s();
     const [serverName, setServerName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [billingPeriod, setBillingPeriod] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("hour");
+    // billingPeriod Только месяц
+    const [billingPeriod] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("month");
     const [showMore, setShowMore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [plans, setPlans] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(serverPlansDDR5.concat(serverPlansDDR4));
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const { createServer } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$data$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useData"])();
     const { convertPrice } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$currency$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCurrency"])();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const visiblePlans = showMore ? serverPlans : serverPlans.slice(0, 8);
+    useEffect({
+        "ServerConfigurator.useEffect": ()=>{
+            fetch('/api/server-plans').then({
+                "ServerConfigurator.useEffect": (res)=>res.json()
+            }["ServerConfigurator.useEffect"]).then({
+                "ServerConfigurator.useEffect": (data)=>{
+                    if (data && data.length > 0) {
+                        const dynamicPlans = data.map({
+                            "ServerConfigurator.useEffect.dynamicPlans": (plan)=>({
+                                    name: plan.nameRu || plan.name,
+                                    cores: plan.cpu,
+                                    ram: plan.ram,
+                                    storage: plan.storage,
+                                    ramType: plan.ramType || 'DDR4',
+                                    prices: {
+                                        month: plan.price
+                                    },
+                                    nvme: plan.nvme || false,
+                                    cpu: plan.cpu
+                                })
+                        }["ServerConfigurator.useEffect.dynamicPlans"]);
+                        setPlans(dynamicPlans);
+                    }
+                }
+            }["ServerConfigurator.useEffect"]).catch({
+                "ServerConfigurator.useEffect": (err)=>console.error('Failed to load server plans:', err)
+            }["ServerConfigurator.useEffect"]);
+        }
+    }["ServerConfigurator.useEffect"], []);
+    // Show 8 DDR5 plans, expand to all DDR5+DDR4 on show more
+    const visiblePlans = showMore ? plans : plans.slice(0, 8);
     const handleCreateServer = (plan)=>{
         if (!user) {
             router.push("/login");
@@ -1301,16 +1536,15 @@ function ServerConfigurator() {
         }
         const priceUSD = plan.prices[billingPeriod];
         const price = convertPrice(priceUSD);
+        // @ts-ignore balance type -- update if balance is elsewhere
         if (user.balance < price) {
             alert(t("configurator.insufficientFunds"));
             router.push("/dashboard/billing");
             return;
         }
         const expiresAt = new Date();
-        if (billingPeriod === "hour") expiresAt.setHours(expiresAt.getHours() + 1);
-        else if (billingPeriod === "month") expiresAt.setMonth(expiresAt.getMonth() + 1);
-        else if (billingPeriod === "3months") expiresAt.setMonth(expiresAt.getMonth() + 3);
-        else if (billingPeriod === "year") expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+        // only "month"
+        expiresAt.setMonth(expiresAt.getMonth() + 1);
         createServer({
             name: serverName,
             plan: plan.name,
@@ -1321,7 +1555,10 @@ function ServerConfigurator() {
             ip: `192.168.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
             expiresAt: expiresAt.toISOString(),
             billingPeriod,
-            price
+            price,
+            ramType: plan.ramType,
+            nvme: plan.nvme,
+            cpu: plan.cpu
         });
         router.push("/dashboard");
     };
@@ -1336,7 +1573,7 @@ function ServerConfigurator() {
                     children: t("configurator.title")
                 }, void 0, false, {
                     fileName: "[project]/components/server-configurator.tsx",
-                    lineNumber: 135,
+                    lineNumber: 447,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1351,7 +1588,7 @@ function ServerConfigurator() {
                                     children: t("configurator.serverName")
                                 }, void 0, false, {
                                     fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 451,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1362,46 +1599,13 @@ function ServerConfigurator() {
                                     className: "bg-background/50 border-border/50 focus:border-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 454,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/server-configurator.tsx",
-                            lineNumber: 138,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "space-y-3",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Label"], {
-                                    className: "text-foreground",
-                                    children: t("configurator.billingType")
-                                }, void 0, false, {
-                                    fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 152,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-2 lg:grid-cols-4 gap-3",
-                                    children: billingPeriods.map((period)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>setBillingPeriod(period),
-                                            className: `px-4 py-3 rounded-lg font-medium transition-all duration-200 ${billingPeriod === period ? "bg-primary text-primary-foreground shadow-lg glow-effect" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`,
-                                            children: t(`configurator.${period}`)
-                                        }, period, false, {
-                                            fileName: "[project]/components/server-configurator.tsx",
-                                            lineNumber: 155,
-                                            columnNumber: 17
-                                        }, this))
-                                }, void 0, false, {
-                                    fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 153,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/server-configurator.tsx",
-                            lineNumber: 151,
+                            lineNumber: 450,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1412,7 +1616,7 @@ function ServerConfigurator() {
                                     children: t("configurator.selectPlan")
                                 }, void 0, false, {
                                     fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 484,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1423,12 +1627,12 @@ function ServerConfigurator() {
                                             onSelect: ()=>handleCreateServer(plan)
                                         }, index, false, {
                                             fileName: "[project]/components/server-configurator.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 487,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 485,
                                     columnNumber: 13
                                 }, this),
                                 serverPlans.length > 8 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1440,39 +1644,39 @@ function ServerConfigurator() {
                                         children: showMore ? t("configurator.showLess") : t("configurator.showMore")
                                     }, void 0, false, {
                                         fileName: "[project]/components/server-configurator.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 498,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/server-configurator.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 497,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/server-configurator.tsx",
-                            lineNumber: 170,
+                            lineNumber: 483,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/server-configurator.tsx",
-                    lineNumber: 137,
+                    lineNumber: 449,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/server-configurator.tsx",
-            lineNumber: 134,
+            lineNumber: 446,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/server-configurator.tsx",
-        lineNumber: 133,
+        lineNumber: 445,
         columnNumber: 5
     }, this);
 }
-_s(ServerConfigurator, "sKz6cNNmpd07uCBE29Xp6gkngjg=", false, function() {
+_s(ServerConfigurator, "CEBwknUq09A2b+32P2jxh0cBzU4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$data$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useData"],
@@ -1607,7 +1811,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/contexts/language-context.tsx [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -1620,11 +1824,6 @@ function HeroSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "relative py-16 lg:py-24 overflow-hidden",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LanguageToggleFloating, {}, void 0, false, {
-                fileName: "[project]/components/hero-section.tsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 z-0 pointer-events-none select-none",
                 children: [
@@ -1926,29 +2125,8 @@ _s(HeroSection, "e/Js9Umc9/cISp9Ww2MTCpYgglc=", false, function() {
     ];
 });
 _c = HeroSection;
-function LanguageToggleFloating() {
-    _s1();
-    const { language, setLanguage } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-        type: "button",
-        onClick: ()=>setLanguage(language === "ru" ? "en" : "ru"),
-        className: "absolute right-4 top-4 z-20 px-3 py-1.5 rounded-full text-sm border border-primary/30 bg-background/70 backdrop-blur-md shadow-sm hover:bg-primary/10 transition-colors",
-        children: language === "ru" ? "RU" : "EN"
-    }, void 0, false, {
-        fileName: "[project]/components/hero-section.tsx",
-        lineNumber: 153,
-        columnNumber: 5
-    }, this);
-}
-_s1(LanguageToggleFloating, "UZUYajh7f/ecAaqs8+JAYjvISYI=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$contexts$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"]
-    ];
-});
-_c1 = LanguageToggleFloating;
-var _c, _c1;
+var _c;
 __turbopack_context__.k.register(_c, "HeroSection");
-__turbopack_context__.k.register(_c1, "LanguageToggleFloating");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

@@ -1,3 +1,0 @@
-module.exports=[76678,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(96686);a.n(d("[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},56241,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(96686);a.n(d("[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/node_modules/next/dist/client/components/builtin/global-error.js"))},54567,a=>{"use strict";a.i(76678);var b=a.i(56241);a.n(b)}];
-
-//# sourceMappingURL=ce4f9_next_dist_client_components_builtin_global-error_67d2f91a.js.map

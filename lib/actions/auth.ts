@@ -5,6 +5,8 @@ import { hashPassword, comparePassword, setAuthCookie, clearAuthCookie, getAuthU
 import { signToken } from "@/lib/jwt"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
+import { resend } from "@/lib/resend"
+import { headers } from "next/headers"
 
 export async function signIn(email: string, password: string) {
   try {
@@ -29,6 +31,19 @@ export async function signIn(email: string, password: string) {
     })
 
     await setAuthCookie(token)
+
+    // Log login
+    const headersList = await headers()
+    await db.log.create({
+      data: {
+        userId: user.id,
+        action: "login",
+        details: "User logged in",
+        ip: headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "unknown",
+        userAgent: headersList.get("user-agent") || "unknown"
+      }
+    })
+
     return { success: true }
   } catch (error) {
     console.error("[v0] Sign in error:", error)
@@ -95,6 +110,38 @@ export async function signUp(email: string, password: string, name?: string, ref
     })
 
     await setAuthCookie(token)
+
+    // Log registration
+    const headersList = await headers()
+    await db.log.create({
+      data: {
+        userId: user.id,
+        action: "register",
+        details: `User registered with email ${user.email}`,
+        ip: headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "unknown",
+        userAgent: headersList.get("user-agent") || "unknown"
+      }
+    })
+
+    // Send confirmation email
+    try {
+      await resend.emails.send({
+        from: "noreply@vds-hub.com",
+        to: user.email,
+        subject: "Welcome to VDS Hub!",
+        html: `
+          <h1>Welcome to VDS Hub, ${user.name || 'User'}!</h1>
+          <p>Thank you for registering. Your account has been created successfully.</p>
+          <p>You can now log in and start using our VDS services.</p>
+          <br>
+          <p>Best regards,<br>VDS Hub Team</p>
+        `
+      })
+    } catch (emailError) {
+      console.error("Failed to send confirmation email:", emailError)
+      // Don't fail registration if email fails
+    }
+
     return { success: true }
   } catch (error) {
     console.error("[v0] Sign up error:", error)

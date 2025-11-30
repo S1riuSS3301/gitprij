@@ -1,7 +1,7 @@
 {
   "pages": {},
   "app": {
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/profile/page": [
+    "[project]/app/dashboard/profile/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",

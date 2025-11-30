@@ -1,9 +1,9 @@
 var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/user/password/route.js")
-R.c("server/chunks/[root-of-the-server]__55a5a0a1._.js")
-R.c("server/chunks/Downloads_vds-hub_vds-hub_public_vds-hub_vds-hub_0d8195f8._.js")
-R.c("server/chunks/ce4f9_next_19d302a6._.js")
-R.c("server/chunks/[root-of-the-server]__4f62f9cc._.js")
-R.c("server/chunks/Downloads_vds-hub_vds-hub_public_vds-hub_vds-hub_c1e99918._.js")
-R.c("server/chunks/33a2b_vds-hub__next-internal_server_app_api_user_password_route_actions_1740484f.js")
-R.m(75397)
-module.exports=R.m(75397).exports
+R.c("server/chunks/[root-of-the-server]__c9fd4720._.js")
+R.c("server/chunks/_4aafced8._.js")
+R.c("server/chunks/node_modules_next_3188e0b6._.js")
+R.c("server/chunks/[root-of-the-server]__8f5ebbc3._.js")
+R.c("server/chunks/_7daee0a4._.js")
+R.c("server/chunks/_next-internal_server_app_api_user_password_route_actions_a589ab2b.js")
+R.m(7485)
+module.exports=R.m(7485).exports

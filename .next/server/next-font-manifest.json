@@ -1,138 +1,138 @@
 {
   "app": {
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/_not-found/page": [
+    "[project]/app/_not-found/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/notifications/page": [
+    "[project]/app/admin/notifications/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/page": [
+    "[project]/app/admin/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/payments/page": [
+    "[project]/app/admin/payments/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/promo-codes/page": [
+    "[project]/app/admin/promo-codes/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/referrals/page": [
+    "[project]/app/admin/referrals/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/servers/page": [
+    "[project]/app/admin/servers/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/admin/users/page": [
+    "[project]/app/admin/users/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/auth/check-email/page": [
+    "[project]/app/auth/check-email/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/billing/page": [
+    "[project]/app/dashboard/billing/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/buying/page": [
+    "[project]/app/dashboard/buying/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/page": [
+    "[project]/app/dashboard/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/profile/page": [
+    "[project]/app/dashboard/profile/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/referrals/page": [
+    "[project]/app/dashboard/referrals/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/servers/page": [
+    "[project]/app/dashboard/servers/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/services/page": [
+    "[project]/app/dashboard/services/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/dashboard/support/page": [
+    "[project]/app/dashboard/support/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/forgot-password/page": [
+    "[project]/app/forgot-password/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/login/page": [
+    "[project]/app/login/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/page": [
+    "[project]/app/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/privacy/page": [
+    "[project]/app/privacy/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/register/page": [
+    "[project]/app/register/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",
       "static/media/051742360c26797e-s.p.102b7f24.woff2"
     ],
-    "[project]/Downloads/vds-hub/vds-hub/public/vds-hub/vds-hub/app/terms/page": [
+    "[project]/app/terms/page": [
       "static/media/9c72aa0f40e4eef8-s.p.18a48cbc.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/26f284dcc38c84c0-s.p.303a03d6.woff2",

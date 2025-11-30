@@ -11,10 +11,28 @@ export default function ForgotPasswordPage() {
   const { t } = useLanguage()
   const [email, setEmail] = useState("")
   const [sent, setSent] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState("")
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    setIsLoading(true)
+    try {
+      const res = await fetch("/api/forgot-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      })
+      if (res.ok) {
+        setSent(true)
+      } else {
+        setError("Failed to send reset email")
+      }
+    } catch (err) {
+      setError("Network error")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -26,10 +44,10 @@ export default function ForgotPasswordPage() {
           </Button>
         </Link>
         <div className="card-gradient rounded-xl p-6 border border-border/50 shadow-2xl">
-          <h1 className="text-2xl font-bold text-foreground mb-4">{t("login.forgotPassword")}</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">Forgot Password</h1>
           {sent ? (
             <p className="text-sm text-muted-foreground">
-              {t("common.emailSent", { defaultValue: "Если email существует, мы отправили письмо для сброса пароля." })}
+              If the email exists, we have sent a password reset link.
             </p>
           ) : (
             <form onSubmit={onSubmit} className="space-y-3">
@@ -37,7 +55,10 @@ export default function ForgotPasswordPage() {
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
               </div>
-              <Button type="submit" className="w-full">{t("common.send", { defaultValue: "Отправить" })}</Button>
+              <Button type="submit" className="w-full" disabled={isLoading}>
+                {isLoading ? "Sending..." : "Send Reset Link"}
+              </Button>
+              {error && <p className="text-sm text-red-500">{error}</p>}
             </form>
           )}
         </div>
@@ -45,5 +66,3 @@ export default function ForgotPasswordPage() {
     </div>
   )
 }
-
-

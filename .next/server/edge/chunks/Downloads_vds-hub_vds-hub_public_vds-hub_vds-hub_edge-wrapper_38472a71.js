@@ -1,3 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/Downloads_vds-hub_vds-hub_public_vds-hub_vds-hub_edge-wrapper_38472a71.js",77001,(e,h,s)=>{self._ENTRIES||={};let l=Promise.resolve().then(()=>e.i(4313));l.catch(()=>{}),self._ENTRIES.middleware_middleware=new Proxy(l,{get(e,h){if("then"===h)return(h,s)=>e.then(h,s);let s=(...s)=>e.then(e=>(0,e[h])(...s));return s.then=(s,l)=>e.then(e=>e[h]).then(s,l),s}})}]);
-
-//# sourceMappingURL=Downloads_vds-hub_vds-hub_public_vds-hub_vds-hub_edge-wrapper_38472a71.js.map

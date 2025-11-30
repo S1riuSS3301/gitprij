@@ -369,14 +369,36 @@ export function ServerConfigurator() {
   // billingPeriod Только месяц
   const [billingPeriod] = useState<BillingPeriod>("month")
   const [showMore, setShowMore] = useState(false)
+  const [plans, setPlans] = useState(serverPlansDDR5.concat(serverPlansDDR4))
   const { user } = useAuth()
   const { createServer } = useData()
   const { convertPrice } = useCurrency()
   const { t } = useLanguage()
   const router = useRouter()
 
+  useEffect(() => {
+    fetch('/api/server-plans')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          const dynamicPlans = data.map((plan: any) => ({
+            name: plan.nameRu || plan.name,
+            cores: plan.cpu,
+            ram: plan.ram,
+            storage: plan.storage,
+            ramType: plan.ramType || 'DDR4',
+            prices: { month: plan.price },
+            nvme: plan.nvme || false,
+            cpu: plan.cpu,
+          }))
+          setPlans(dynamicPlans)
+        }
+      })
+      .catch(err => console.error('Failed to load server plans:', err))
+  }, [])
+
   // Show 8 DDR5 plans, expand to all DDR5+DDR4 on show more
-  const visiblePlans = showMore ? serverPlans : serverPlans.slice(0, 8)
+  const visiblePlans = showMore ? plans : plans.slice(0, 8)
 
   const handleCreateServer = (plan: (typeof serverPlans)[0]) => {
     if (!user) {

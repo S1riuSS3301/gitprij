@@ -18,6 +18,12 @@ model User {
   role          String        @default("user")
   referralCode  String        @unique @default(cuid())
   referredBy    String?
+  ip            String?
+  banned        Boolean       @default(false)
+  bannedBy      String?
+  bannedAt      DateTime?
+  resetToken    String?
+  resetExpires  DateTime?
   createdAt     DateTime      @default(now())
 
   // Relations
@@ -25,6 +31,10 @@ model User {
   orders        Order[]
   transactions  Transaction[]
   referrals     Referral[]    @relation("Referrer")
+  referredReferrals Referral[] @relation("Referred")
+  promoCodeUsages PromoCodeUsage[]
+  notifications Notification[]
+  logs          Log[]
 }
 
 model Profile {
@@ -73,6 +83,10 @@ model Order {
   pricePaid     Float
   billingPeriod BillingPeriod @default(monthly)
   serverName    String
+  vmId          String?       // VMmanager VM ID
+  ip            String?       // Server IP address
+  password      String?       // Root password
+  os            String?       // OS ID
   status        OrderStatus   @default(active)
   expiresAt     DateTime
   createdAt     DateTime      @default(now())
@@ -106,4 +120,59 @@ model Referral {
   createdAt     DateTime @default(now())
 
   referrer      User     @relation("Referrer", fields: [referrerId], references: [id], onDelete: Cascade)
+  referred      User     @relation("Referred", fields: [referredId], references: [id], onDelete: Cascade)
+}
+
+model PromoCode {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  discount  Float
+  type      String   // 'percent' or 'fixed'
+  maxUses   Int
+  used      Int      @default(0)
+  expiresAt DateTime
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  usages    PromoCodeUsage[]
+}
+
+model PromoCodeUsage {
+  id          String   @id @default(cuid())
+  promoCodeId String
+  userId      String
+  usedAt      DateTime @default(now())
+
+  promoCode   PromoCode @relation(fields: [promoCodeId], references: [id], onDelete: Cascade)
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // 'email' or 'in-app'
+  subject   String?
+  message   String
+  recipients String? // JSON array of emails or user IDs
+  sentBy    String
+  sentAt    DateTime @default(now())
+
+  sender    User     @relation(fields: [sentBy], references: [id])
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+}
+
+model Log {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  details   String?
+  ip        String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
 }

@@ -959,7 +959,7 @@ const translations = {
         "hero.subtitle": "Мощные VDS с мгновенным развертыванием, гибкой оплатой и профессиональной поддержкой 24/7",
         "hero.createServer": "Создать сервер",
         "hero.register": "Зарегистрироваться",
-        "hero.uptime": "99.9% Uptime",
+        "hero.uptime": "99.9% Аптайм",
         "hero.instantDeploy": "Мгновенное развертывание",
         "hero.ddosProtection": "DDoS защита",
         // Features
@@ -1033,7 +1033,7 @@ const translations = {
         "register.required": "*",
         // Login Form
         "login.email": "Email",
-        "login.password": "Password",
+        "login.password": "Пароль",
         "login.rememberMe": "Запомнить меня",
         "login.forgotPassword": "Забыли пароль?",
         "login.captcha": "Защита от ботов (Cloudflare Turnstile)",
@@ -1075,7 +1075,6 @@ const translations = {
         "servers.createFirstDesc": "Создайте свой первый сервер, чтобы начать работу",
         "servers.serverName": "Название сервера",
         "servers.serverNamePlaceholder": "Например: Web Server",
-        "servers.billingPeriod": "Период оплаты",
         "servers.monthly": "Ежемесячно",
         "servers.quarterly": "Ежеквартально",
         "servers.yearly": "Ежегодно",
@@ -1090,25 +1089,56 @@ const translations = {
         "servers.days": "дней",
         "servers.paid": "Оплачено",
         "servers.extend": "Продлить",
+        "servers.successOrder": "Сервер успешно заказан!",
         "servers.delete": "Удалить",
         "servers.confirmDelete": "Вы уверены, что хотите удалить этот сервер?",
         "servers.extendInfo": "Функция продления будет доступна в ближайшее время",
-        "plan.cpu": "CPU",
-        "plan.bandwidth": "Трафик",
+        // 🆕 Server Buy Page (из скриншота)
+        "servers.buyTitle": "Покупка сервера",
+        "servers.choosePlan": "Выберите тарифный план",
+        "servers.orderConfig": "Настройка заказа",
+        "servers.nameLabel": "Название сервера",
+        "servers.namePlaceholder": "Введите имя сервера",
+        "servers.billing": "Тип оплаты",
+        "servers.hourly": "Почасовая",
+        "servers.monthlyBilling": "Ежемесячная",
+        "servers.buyButton": "Купить сервер",
+        // Common
         "common.cancel": "Отмена",
         "common.creating": "Создание...",
         "common.save": "Сохранить",
         "common.delete": "Удалить",
-        "common.edit": "Редактировать"
+        "common.edit": "Редактировать",
+        "common.back": "Назад",
+        // Privacy Page
+        "privacy.title": "Политика конфиденциальности",
+        "privacy.backToHome": "Назад на главную",
+        "privacy.intro": "На этой странице подробно описано, как мы собираем, храним и используем ваши персональные данные.",
+        "privacy.item1.title": "Данные для регистрации и идентификации",
+        "privacy.item1.details": "Используются для создания аккаунта, авторизации и обработки платежей.",
+        "privacy.item2.title": "Технические данные",
+        "privacy.item2.details": "Помогают анализировать работу сайта и предотвращать злоупотребления.",
+        "privacy.item3.title": "Данные, которые вы храните на сервере",
+        "privacy.item3.details": "Мы не просматриваем ваши данные, кроме случаев, предусмотренных законом.",
+        "privacy.item4.title": "Передача данных третьим лицам",
+        "privacy.item4.details": "Возможна только надежным партнерам и только при необходимости.",
+        "privacy.item5.title": "Хранение и защита данных",
+        "privacy.item5.details": "Используются современные технологии защиты и шифрования.",
+        "privacy.item6.title": "Ваши права",
+        "privacy.item6.details": "Вы можете запросить удаление, изменение или просмотр своих данных.",
+        "privacy.page.underText": "Мы ценим вашу конфиденциальность и ответственно относимся к вашим данным.",
+        "privacy.page.title": "Политика конфиденциальности",
+        "privacy.page.backToHome": "Назад на главную",
+        // Footer
+        "footer.privacyPolicy": "Политика конфиденциальности"
     },
+    // ================= English =================
     en: {
-        // Header
         "header.login": "Login",
         "header.register": "Register",
         "header.dashboard": "Dashboard",
         "header.ru": "Русский",
         "header.en": "English",
-        // Hero Section
         "hero.badge": "Premium VDS/VPS Hosting",
         "hero.title1": "Virtual Servers",
         "hero.title2": "of the New Generation",
@@ -1118,7 +1148,6 @@ const translations = {
         "hero.uptime": "99.9% Uptime",
         "hero.instantDeploy": "Instant Deployment",
         "hero.ddosProtection": "DDoS Protection",
-        // Features
         "features.instantDeploy.title": "Instant Deployment",
         "features.instantDeploy.desc": "Your server will be ready in seconds after payment",
         "features.ddosProtection.title": "DDoS Protection",
@@ -1127,7 +1156,6 @@ const translations = {
         "features.hourlyBilling.desc": "Pay only for actual server usage time",
         "features.support247.title": "24/7 Support",
         "features.support247.desc": "Our team is always ready to help you anytime",
-        // Server Configurator
         "configurator.title": "Your New Virtual Server",
         "configurator.serverName": "Name",
         "configurator.serverNamePlaceholder": "My First Server",
@@ -1143,12 +1171,10 @@ const translations = {
         "configurator.create": "Create",
         "configurator.enterName": "Please enter server name",
         "configurator.insufficientFunds": "Insufficient funds",
-        // Sidebar
         "sidebar.virtualServer": "Virtual Server",
         "sidebar.myServices": "My Services",
         "sidebar.support": "Support",
         "sidebar.referrals": "Referral System",
-        // Server Plan Card
         "plan.cores": "cores",
         "plan.ram": "RAM",
         "plan.storage": "Storage",
@@ -1160,7 +1186,6 @@ const translations = {
         "plan.perYear": "yr",
         "plan.cpu": "CPU",
         "plan.bandwidth": "Bandwidth",
-        // Auth Pages
         "auth.backToHome": "Back to Home",
         "auth.createAccount": "Create Account",
         "auth.joinToday": "Join VDS_HUB today",
@@ -1170,7 +1195,6 @@ const translations = {
         "auth.noAccount": "Don't have an account?",
         "auth.login": "Sign In",
         "auth.register": "Sign Up",
-        // Register Form
         "register.fullName": "Full Name",
         "register.email": "Email",
         "register.password": "Password",
@@ -1187,7 +1211,6 @@ const translations = {
         "register.passwordTooShort": "Password must be at least 8 characters",
         "register.error": "Registration error",
         "register.required": "*",
-        // Login Form
         "login.email": "Email",
         "login.password": "Password",
         "login.rememberMe": "Remember me",
@@ -1196,7 +1219,6 @@ const translations = {
         "login.loginButton": "Sign In",
         "login.loggingIn": "Signing in...",
         "login.error": "Login error",
-        // Dashboard
         "dashboard.title": "Dashboard",
         "dashboard.welcome": "Welcome to VDS_HUB",
         "dashboard.topUp": "Top Up",
@@ -1205,7 +1227,6 @@ const translations = {
         "dashboard.referrals": "Referral System",
         "dashboard.adminPanel": "Admin Panel",
         "dashboard.logout": "Logout",
-        // Stats Cards
         "stats.activeServers": "Active Servers",
         "stats.balance": "Balance",
         "stats.usage": "Usage",
@@ -1214,7 +1235,6 @@ const translations = {
         "stats.lastTopUp": "Last top-up",
         "stats.avgLoad": "Average load",
         "stats.perWeek": "per week",
-        // Servers List
         "servers.myServers": "My Servers",
         "servers.createServer": "Create Server",
         "servers.running": "Running",
@@ -1231,7 +1251,6 @@ const translations = {
         "servers.createFirstDesc": "Create your first server to get started",
         "servers.serverName": "Server Name",
         "servers.serverNamePlaceholder": "e.g., Web Server",
-        "servers.billingPeriod": "Billing Period",
         "servers.monthly": "Monthly",
         "servers.quarterly": "Quarterly",
         "servers.yearly": "Yearly",
@@ -1249,33 +1268,60 @@ const translations = {
         "servers.delete": "Delete",
         "servers.confirmDelete": "Are you sure you want to delete this server?",
         "servers.extendInfo": "Extension feature will be available soon",
-        "plan.cpu": "CPU",
-        "plan.bandwidth": "Bandwidth",
+        // 🆕 Server Buy Page (from screenshot)
+        "servers.buyTitle": "Buy Server",
+        "servers.choosePlan": "Choose Plan",
+        "servers.orderConfig": "Order Configuration",
+        "servers.nameLabel": "Server Name",
+        "servers.namePlaceholder": "Enter server name",
+        "servers.billing": "Billing",
+        "servers.hourly": "Hourly",
+        "servers.monthlyBilling": "Monthly",
+        "servers.buyButton": "Buy Server",
         "common.cancel": "Cancel",
         "common.creating": "Creating...",
         "common.save": "Save",
         "common.delete": "Delete",
-        "common.edit": "Edit"
+        "common.edit": "Edit",
+        "privacy.title": "Privacy Policy",
+        "privacy.backToHome": "Back to Home",
+        "privacy.intro": "This page details how we collect, store, and use your personal data on our service.",
+        "privacy.item1.title": "Registration and identification data",
+        "privacy.item1.details": "Used to create an account, authorize, and process payments.",
+        "privacy.item2.title": "Technical data",
+        "privacy.item2.details": "Helps analyze site performance and prevent abuse.",
+        "privacy.item3.title": "Data stored on your server",
+        "privacy.item3.details": "We never access your stored data unless required by law.",
+        "privacy.item4.title": "Data sharing with third parties",
+        "privacy.item4.details": "Only possible with trusted partners and only when necessary.",
+        "privacy.item5.title": "Data storage and protection",
+        "privacy.item5.details": "Modern protection and encryption technologies are used.",
+        "privacy.item6.title": "Your rights",
+        "privacy.item6.details": "You can request deletion, modification, or access to your data.",
+        "privacy.page.underText": "We value your privacy and handle your data responsibly.",
+        "privacy.page.title": "Privacy Policy",
+        "privacy.page.backToHome": "Back to Home",
+        // Footer
+        "footer.privacyPolicy": "Privacy Policy"
     }
 };
 function LanguageProvider({ children }) {
     _s();
-    const [language, setLanguageState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("ru");
+    const [language, setLanguage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("ru");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "LanguageProvider.useEffect": ()=>{
-            const saved = localStorage.getItem("language");
-            if (saved && (saved === "ru" || saved === "en")) {
-                setLanguageState(saved);
-            }
+            const saved = localStorage.getItem("lang");
+            if (saved) setLanguage(saved);
         }
     }["LanguageProvider.useEffect"], []);
-    const setLanguage = (lang)=>{
-        setLanguageState(lang);
-        localStorage.setItem("language", lang);
-    };
-    const t = (key)=>{
-        return translations[language][key] || key;
-    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "LanguageProvider.useEffect": ()=>{
+            localStorage.setItem("lang", language);
+        }
+    }["LanguageProvider.useEffect"], [
+        language
+    ]);
+    const t = (key)=>translations[language][key] || key;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LanguageContext.Provider, {
         value: {
             language,
@@ -1285,21 +1331,19 @@ function LanguageProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/contexts/language-context.tsx",
-        lineNumber: 373,
-        columnNumber: 10
+        lineNumber: 424,
+        columnNumber: 5
     }, this);
 }
-_s(LanguageProvider, "rbKD72uobvGgtjc/k2Jj6Qtv/pU=");
+_s(LanguageProvider, "kRIJEhsRHS70Nw78QSQ0y1pQbKk=");
 _c = LanguageProvider;
-function useLanguage() {
+const useLanguage = ()=>{
     _s1();
-    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(LanguageContext);
-    if (!context) {
-        throw new Error("useLanguage must be used within LanguageProvider");
-    }
-    return context;
-}
-_s1(useLanguage, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
+    const ctx = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(LanguageContext);
+    if (!ctx) throw new Error("useLanguage must be used within LanguageProvider");
+    return ctx;
+};
+_s1(useLanguage, "/dMy7t63NXD4eYACoT93CePwGrg=");
 var _c;
 __turbopack_context__.k.register(_c, "LanguageProvider");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
