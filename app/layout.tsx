@@ -1,59 +1,7 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { AuthProvider } from "@/contexts/auth-context"
-import { DataProvider } from "@/contexts/data-context"
-import { CurrencyProvider } from "@/contexts/currency-context"
-import { Toaster } from "@/components/ui/toaster"
-import { LanguageProvider } from "@/contexts/language-context"
-import "./globals.css"
-
-import logo from "@/public/logovds.jpg"
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-sans",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-mono",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-})
-
-export const metadata: Metadata = {
-  title: "VDS HUB - Premium Virtual Server Hosting",
-  description: "Professional VDS/VPS hosting with flexible configurations and competitive pricing",
-  generator: "",
-}
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
-  return (
-    <html lang="ru" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <head>
-        {/* Replace the existing favicon with the .ico file */}
-        <link rel="icon" type="image/x-icon" href="/logovds-removebg-preview.ico" />
-      </head>
-      <body className="font-sans antialiased">
-        <LanguageProvider>
-          <CurrencyProvider>
-            <AuthProvider>
-              <DataProvider>
-                {children}
-                <Toaster />
-              </DataProvider>
-            </AuthProvider>
-          </CurrencyProvider>
-        </LanguageProvider>
-        <Analytics />
-      </body>
-    </html>
-  )
+}) {
+  return children
 }

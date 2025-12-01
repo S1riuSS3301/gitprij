@@ -3,12 +3,12 @@
 import { ArrowRight, Server } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
-import { useLanguage } from "@/contexts/language-context"
+import { useTranslations } from 'next-intl'
 import React from "react"
 
 export function HeroSection() {
   const router = useRouter()
-  const { t } = useLanguage()
+  const t = useTranslations('home')
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -146,5 +146,3 @@ export function HeroSection() {
     </section>
   )
 }
-
-

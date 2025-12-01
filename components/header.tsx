@@ -3,13 +3,17 @@
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { useLanguage } from "@/contexts/language-context"
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { motion } from "framer-motion"
 import { FaWallet, FaServer, FaSignInAlt, FaUserPlus, FaThLarge } from "react-icons/fa"
 import Image from "next/image"
 
 export function Header() {
-  const { t, language, setLanguage } = useLanguage()
+  const t = useTranslations('navigation')
+  const tDashboard = useTranslations('dashboard')
+  const locale = useLocale()
+  const router = useRouter()
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [balance, setBalance] = useState<number | null>(null)
   const [serversCount, setServersCount] = useState<number>(0)
@@ -55,7 +59,7 @@ export function Header() {
       <div className="relative container mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Логотип строго в самом левом углу: absolute left-0, без margin/padding */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center z-50">
-          <Link href="/" className="flex items-center">
+          <Link href={`/${locale}`} className="flex items-center">
            
               <Image
                 src="/logo-vds-hub.png"
@@ -85,9 +89,9 @@ export function Header() {
             variant="outline"
             size="sm"
             className="hidden sm:inline-flex rounded-full px-4 py-2 border font-semibold border-primary/40 bg-primary/5 transition-all duration-300 ease-out text-sm"
-            onClick={() => setLanguage(language === "ru" ? "en" : "ru")}
+            onClick={() => router.replace(`/${locale === "ru" ? "en" : "ru"}`)}
           >
-            {language === "ru" ? "RU" : "EN"}
+            {locale === "ru" ? "EN" : "RU"}
           </Button>
           {isAuthenticated && (
             <div className="hidden sm:flex items-center gap-3">
@@ -97,7 +101,7 @@ export function Header() {
                 transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
               >
                 <FaWallet className="text-primary" size={17} />
-                <span className="text-muted-foreground">{language === "ru" ? "Баланс" : "Balance"}</span>
+                <span className="text-muted-foreground">{tDashboard("balance")}</span>
                 <span className="font-bold text-foreground">
                   {new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(balance ?? 0)}
                 </span>
@@ -107,7 +111,7 @@ export function Header() {
                 animate={{ boxShadow: ["0 0 8px #8c6cfa55", "0 0 12px #ac94fbcc", "0 0 8px #8c6cfa55"] }}
                 transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
               >
-                <FaServer /> {language === "ru" ? "VPS" : "VPS"}: <span className="font-bold ml-1">{serversCount}</span>
+                <FaServer /> {tDashboard("servers")}: <span className="font-bold ml-1">{serversCount}</span>
               </motion.div>
             </div>
           )}

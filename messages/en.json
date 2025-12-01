@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "home": "Home",
+    "servers": "Servers",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "support": "Support"
+  },
+  "home": {
+    "title": "VDS HUB - Premium Virtual Server Hosting",
+    "subtitle": "Professional VDS/VPS hosting with flexible configurations and competitive pricing",
+    "hero": {
+      "badge": "Premium Hosting",
+      "title1": "Reliable VDS",
+      "title2": "Hosting",
+      "subtitle": "Professional VDS/VPS hosting with flexible configurations and competitive pricing. High-performance virtual servers with instant deployment.",
+      "createServer": "Create Server",
+      "register": "Register",
+      "uptime": "99.9% uptime",
+      "instantDeploy": "Instant Deploy",
+      "ddosProtection": "DDoS Protection"
+    },
+    "get_started": "Get Started",
+    "learn_more": "Learn More"
+  },
+  "auth": {
+    "login_title": "Sign In",
+    "register_title": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "login_button": "Sign In",
+    "register_button": "Sign Up",
+    "forgot_password": "Forgot password?",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?"
+  },
+  "dashboard": {
+    "balance": "Balance",
+    "servers": "Servers",
+    "payments": "Payments",
+    "referrals": "Referrals"
+  }
+}

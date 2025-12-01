@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "servers": "Серверы",
+    "dashboard": "Личный кабинет",
+    "admin": "Админка",
+    "login": "Войти",
+    "register": "Регистрация",
+    "logout": "Выйти",
+    "support": "Поддержка"
+  },
+  "home": {
+    "title": "VDS HUB - Премиум хостинг виртуальных серверов",
+    "subtitle": "Профессиональный VDS/VPS хостинг с гибкими конфигурациями и конкурентными ценами",
+    "hero": {
+      "badge": "Премиум хостинг",
+      "title1": "Надежный VDS",
+      "title2": "хостинг",
+      "subtitle": "Профессиональный VDS/VPS хостинг с гибкими конфигурациями и конкурентными ценами. Высокопроизводительные виртуальные серверы с мгновенной выдачей.",
+      "createServer": "Создать сервер",
+      "register": "Регистрация",
+      "uptime": "99.9% uptime",
+      "instantDeploy": "Мгновенная выдача",
+      "ddosProtection": "DDoS защита"
+    },
+    "get_started": "Начать",
+    "learn_more": "Узнать больше"
+  },
+  "auth": {
+    "login_title": "Вход в аккаунт",
+    "register_title": "Регистрация",
+    "email": "Email",
+    "password": "Пароль",
+    "confirm_password": "Подтвердите пароль",
+    "login_button": "Войти",
+    "register_button": "Зарегистрироваться",
+    "forgot_password": "Забыли пароль?",
+    "no_account": "Нет аккаунта?",
+    "have_account": "Уже есть аккаунт?"
+  },
+  "dashboard": {
+    "balance": "Баланс",
+    "servers": "Серверы",
+    "payments": "Платежи",
+    "referrals": "Рефералы"
+  }
+}
