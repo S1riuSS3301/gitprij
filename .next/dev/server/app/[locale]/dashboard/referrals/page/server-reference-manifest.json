@@ -1,0 +1,50 @@
+{
+  "node": {
+    "60e8f0b7e21b6bbbad7922de001eaf79883b32971e": {
+      "workers": {
+        "app/[locale]/dashboard/referrals/page": {
+          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/dashboard/referrals/page": "action-browser"
+      },
+      "exportedName": "signIn",
+      "filename": "lib/actions/auth.ts"
+    },
+    "008ff62aa6bf6c8cbb7222e7c12c009d3713f678af": {
+      "workers": {
+        "app/[locale]/dashboard/referrals/page": {
+          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/dashboard/referrals/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "lib/actions/auth.ts"
+    },
+    "785c45f17123f8497ecb33c7dc2eaed1e528347ce9": {
+      "workers": {
+        "app/[locale]/dashboard/referrals/page": {
+          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/dashboard/referrals/page": "action-browser"
+      },
+      "exportedName": "signUp",
+      "filename": "lib/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

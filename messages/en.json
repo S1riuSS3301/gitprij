@@ -43,5 +43,13 @@
     "servers": "Servers",
     "payments": "Payments",
     "referrals": "Referrals"
+  },
+  "admin": {
+    "totalRevenue": "Total Revenue",
+    "newUsers": "New Users",
+    "orders": "Orders",
+    "revenueChart": "Revenue Chart",
+    "revenueByMonth": "Revenue by month",
+    "chartPlaceholder": "Chart will be implemented using a charting library (e.g., Recharts)"
   }
 }

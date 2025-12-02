@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useAuth } from "@/contexts/auth-context"
 import { useData } from "@/contexts/data-context"
 import { useCurrency } from "@/contexts/currency-context"
@@ -485,7 +485,7 @@ export function ServerConfigurator() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {visiblePlans.map((plan, index) => (
                 <ServerPlanCard
-                  key={index}
+                  key={`${plan.name}-${index}`}
                   plan={plan}
                   billingPeriod={billingPeriod}
                   onSelect={() => handleCreateServer(plan)}

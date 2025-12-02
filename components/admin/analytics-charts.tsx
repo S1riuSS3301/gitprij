@@ -2,8 +2,10 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BarChart3, TrendingUp, Users, DollarSign } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function AnalyticsCharts() {
+  const t = useTranslations('admin')
   // Placeholder data - replace with real API data
   const revenueData = [
     { month: "Янв", revenue: 12000 },
@@ -27,7 +29,7 @@ export function AnalyticsCharts() {
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Общий доход</CardTitle>
+          <CardTitle className="text-sm font-medium">{t('totalRevenue')}</CardTitle>
           <DollarSign className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
@@ -40,7 +42,7 @@ export function AnalyticsCharts() {
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Новые пользователи</CardTitle>
+          <CardTitle className="text-sm font-medium">{t('newUsers')}</CardTitle>
           <Users className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
@@ -53,7 +55,7 @@ export function AnalyticsCharts() {
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Заказы</CardTitle>
+          <CardTitle className="text-sm font-medium">{t('orders')}</CardTitle>
           <BarChart3 className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
@@ -66,16 +68,16 @@ export function AnalyticsCharts() {
 
       <Card className="md:col-span-2 lg:col-span-3">
         <CardHeader>
-          <CardTitle>График доходов</CardTitle>
+          <CardTitle>{t('revenueChart')}</CardTitle>
           <CardDescription>
-            Доход по месяцам
+            {t('revenueByMonth')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-[300px] flex items-center justify-center text-muted-foreground">
             <div className="text-center">
               <BarChart3 className="h-12 w-12 mx-auto mb-4 opacity-50" />
-              <p>График будет реализован с использованием библиотеки для графиков (например, Recharts)</p>
+              <p>{t('chartPlaceholder')}</p>
             </div>
           </div>
         </CardContent>

@@ -43,5 +43,13 @@
     "servers": "Серверы",
     "payments": "Платежи",
     "referrals": "Рефералы"
+  },
+  "admin": {
+    "totalRevenue": "Общий доход",
+    "newUsers": "Новые пользователи",
+    "orders": "Заказы",
+    "revenueChart": "График доходов",
+    "revenueByMonth": "Доход по месяцам",
+    "chartPlaceholder": "График будет реализован с использованием библиотеки для графиков (например, Recharts)"
   }
 }

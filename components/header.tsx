@@ -122,7 +122,7 @@ export function Header() {
                   size="sm"
                   className="rounded-full px-5 py-2 bg-primary text-white font-extrabold shadow-md text-base transition-all duration-300 border border-primary/70 flex gap-2 items-center"
                 >
-                  <FaThLarge size={17} /> {t("header.dashboard")}
+                  <FaThLarge size={17} /> {t("dashboard")}
                 </Button>
               </Link>
             </motion.div>
@@ -135,7 +135,7 @@ export function Header() {
                     size="sm"
                     className="rounded-full px-4 py-2 font-bold border border-primary/25 bg-transparent transition-all duration-300 text-sm flex gap-2 items-center"
                   >
-                    <FaSignInAlt size={16} /> {t("header.login")}
+                    <FaSignInAlt size={16} /> {t("login")}
                   </Button>
                 </Link>
               </motion.div>
@@ -145,7 +145,7 @@ export function Header() {
                     size="sm"
                     className="rounded-full px-5 py-2 bg-primary text-white font-extrabold border border-primary/70 shadow-md text-base transition-all duration-300 flex gap-2 items-center"
                   >
-                    <FaUserPlus size={16} /> {t("header.register")}
+                    <FaUserPlus size={16} /> {t("register")}
                   </Button>
                 </Link>
               </motion.div>

@@ -194,7 +194,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 ;
 ;
 ;
-async function GET() {
+async function GET(req) {
     try {
         const authUser = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$utils$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["getAuthUser"])();
         if (!authUser) {
@@ -204,14 +204,14 @@ async function GET() {
                 status: 401
             });
         }
-        // Гарантируем существование пользователя и профиля, чтобы избежать P2003
-        const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].user.findUnique({
+        // Гарантируем, что пользователь и профиль существуют
+        let user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].user.findUnique({
             where: {
                 id: authUser.userId
             }
         });
         if (!user) {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].user.create({
+            user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].user.create({
                 data: {
                     id: authUser.userId,
                     email: authUser.email,
@@ -221,19 +221,27 @@ async function GET() {
                 }
             });
         }
-        const profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.upsert({
+        let profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.findUnique({
             where: {
                 userId: authUser.userId
-            },
-            update: {},
-            create: {
-                userId: authUser.userId,
-                balance: 0
             }
         });
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(profile);
+        if (!profile) {
+            profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.create({
+                data: {
+                    userId: authUser.userId,
+                    balance: 0
+                }
+            });
+        }
+        // Можно дополнительно подгружать user.email/id сюда
+        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+            ...profile,
+            email: user.email,
+            name: user.name
+        });
     } catch (error) {
-        console.error("[v0] Error fetching profile:", error);
+        console.error("[profile] Error fetching profile:", error);
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             error: "Failed to fetch profile"
         }, {
@@ -252,20 +260,30 @@ async function PATCH(request) {
             });
         }
         const body = await request.json();
-        // Обновляем существующий или создаём новый профиль для пользователя
-        const profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.upsert({
+        // Обновляем профиль
+        let profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.findUnique({
             where: {
                 userId: authUser.userId
-            },
-            update: body,
-            create: {
-                userId: authUser.userId,
-                ...body ?? {}
             }
         });
+        if (!profile) {
+            profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.create({
+                data: {
+                    userId: authUser.userId,
+                    ...body ?? {}
+                }
+            });
+        } else {
+            profile = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__prisma__as__db$3e$__["db"].profile.update({
+                where: {
+                    userId: authUser.userId
+                },
+                data: body
+            });
+        }
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(profile);
     } catch (error) {
-        console.error("[v0] Error updating profile:", error);
+        console.error("[profile] Error updating profile:", error);
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             error: "Failed to update profile"
         }, {
