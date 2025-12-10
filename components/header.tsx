@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { motion } from "framer-motion"
-import { FaWallet, FaServer, FaSignInAlt, FaUserPlus, FaThLarge } from "react-icons/fa"
+import { FaWallet, FaServer, FaSignInAlt, FaUserPlus, FaThLarge, FaTelegram, FaBell } from "react-icons/fa"
 import Image from "next/image"
 
 export function Header() {
@@ -88,32 +88,39 @@ export function Header() {
           <Button
             variant="outline"
             size="sm"
-            className="hidden sm:inline-flex rounded-full px-4 py-2 border font-semibold border-primary/40 bg-primary/5 transition-all duration-300 ease-out text-sm"
+            className="inline-flex rounded-full px-4 py-2 border font-semibold border-primary/40 bg-primary/5 transition-all duration-300 ease-out text-sm"
             onClick={() => router.replace(`/${locale === "ru" ? "en" : "ru"}`)}
           >
             {locale === "ru" ? "EN" : "RU"}
           </Button>
           {isAuthenticated && (
-            <div className="hidden sm:flex items-center gap-3">
-              <motion.div
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border shadow-sm border-primary/25 text-base font-semibold transition-all duration-300"
-                animate={{ boxShadow: ["0 0 8px #8c6cfa55", "0 0 12px #ac94fbcc", "0 0 8px #8c6cfa55"] }}
-                transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-              >
-                <FaWallet className="text-primary" size={17} />
-                <span className="text-muted-foreground">{tDashboard("balance")}</span>
-                <span className="font-bold text-foreground">
-                  {new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(balance ?? 0)}
-                </span>
-              </motion.div>
-              <motion.div
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/30 border shadow-sm border-secondary/25 text-base text-foreground font-semibold transition-all duration-300"
-                animate={{ boxShadow: ["0 0 8px #8c6cfa55", "0 0 12px #ac94fbcc", "0 0 8px #8c6cfa55"] }}
-                transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-              >
-                <FaServer /> {tDashboard("servers")}: <span className="font-bold ml-1">{serversCount}</span>
-              </motion.div>
-            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="inline-flex rounded-full px-3 py-2 text-primary hover:bg-primary/10 transition-all duration-300"
+              onClick={() => router.push("/dashboard/billing")}
+            >
+              <FaWallet size={17} />
+            </Button>
+          )}
+          {isAuthenticated && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="inline-flex rounded-full px-3 py-2 text-primary hover:bg-primary/10 transition-all duration-300"
+              onClick={() => window.open("https://t.me/VDS_HUB", "_blank")}
+            >
+              <FaTelegram size={17} />
+            </Button>
+          )}
+          {isAuthenticated && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="inline-flex rounded-full px-3 py-2 text-primary hover:bg-primary/10 transition-all duration-300"
+            >
+              <FaBell size={17} />
+            </Button>
           )}
           {isAuthenticated ? (
             <motion.div transition={{ duration: 0.3, ease: "easeOut" }}>

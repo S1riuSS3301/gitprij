@@ -51,5 +51,160 @@
     "revenueChart": "Revenue Chart",
     "revenueByMonth": "Revenue by month",
     "chartPlaceholder": "Chart will be implemented using a charting library (e.g., Recharts)"
+  },
+  "configurator": {
+    "title": "Server Configurator",
+    "serverName": "Server Name",
+    "serverNamePlaceholder": "Enter your server name",
+    "billingType": "Billing Period",
+    "month": "Month",
+    "selectPlan": "Select Plan",
+    "showLess": "Show Less",
+    "showMore": "Show More",
+    "enterName": "Please enter a server name",
+    "insufficientFunds": "Insufficient Funds"
+  },
+  "plan": {
+    "perHour": "hour",
+    "perMonth": "month",
+    "per3Months": "3 months",
+    "perYear": "year",
+    "popular": "Popular",
+    "ram": "RAM",
+    "storage": "Storage",
+    "cpu": "CPU",
+    "cores": "cores",
+    "select": "Select"
+  },
+  "auth": {
+    "login_title": "Sign In",
+    "register_title": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "login_button": "Sign In",
+    "register_button": "Sign Up",
+    "forgot_password": "Forgot password?",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "backToHome": "Back to Home",
+    "createAccount": "Create Account",
+    "joinToday": "Join Today",
+    "login": "sign in",
+    "register": "sign up",
+    "welcome": "Welcome",
+    "loginSubtitle": "Sign in to your account",
+    "passwordMismatch": "Passwords do not match",
+    "acceptTermsError": "You must accept the terms of use",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "error": "An error occurred",
+    "fullName": "Full Name",
+    "required": "(required)",
+    "passwordMinLength": "At least 8 characters",
+    "acceptTerms": "I accept the",
+    "terms": "terms of use",
+    "and": "and",
+    "privacy": "privacy policy",
+    "creating": "Creating...",
+    "createButton": "Create Account",
+    "captcha": "Complete CAPTCHA",
+    "loggingIn": "Logging in...",
+    "loginButton": "Sign In",
+    "rememberMe": "Remember me"
+  },
+  "dashboard": {
+    "balance": "Balance",
+    "servers": "Servers",
+    "payments": "Payments",
+    "referrals": "Referrals",
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "billing": "Billing",
+    "topUp": "Top Up",
+    "profile": "Profile",
+    "adminPanel": "Admin Panel",
+    "logout": "Logout"
+  },
+  "servers": {
+    "myServers": "My Servers",
+    "noServers": "You have no servers",
+    "createFirstDesc": "Create your first server",
+    "running": "Running",
+    "stopped": "Stopped",
+    "plan": "Plan",
+    "expiresIn": "Expires in",
+    "days": "days",
+    "paid": "Paid",
+    "fillAllFields": "Please fill all fields",
+    "createError": "Server creation error",
+    "createSuccess": "Server created successfully",
+    "createServer": "Create Server",
+    "serverName": "Server Name",
+    "billingPeriod": "Billing Period",
+    "selectPlan": "Select Plan",
+    "insufficientBalance": "Insufficient balance",
+    "currentBalance": "Current balance",
+    "selectedPlan": "Selected plan",
+    "total": "Total",
+    "title": "Server Management",
+    "subtitle": "Manage your virtual servers",
+    "create": "Create",
+    "monthly": "monthly"
+  },
+  "stats": {
+    "activeServers": "Active Servers",
+    "perMonth": "per month",
+    "balance": "Balance",
+    "lastTopUp": "Last Top-up",
+    "usage": "Usage",
+    "avgLoad": "Average Load",
+    "referralIncome": "Referral Income",
+    "perWeek": "per week",
+    "perHour": "per hour"
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "noActivity": "No activity",
+    "login": "Login",
+    "minutesAgo": "minutes ago"
+  },
+  "sidebar": {
+    "myServices": "My Services",
+    "support": "Support"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "creating": "Creating..."
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "backToHome": "Back to Home",
+    "item1": {
+      "title": "Information Collection",
+      "details": "We collect information you directly provide to us, such as your name, email address, and payment information when registering or ordering services."
+    },
+    "item2": {
+      "title": "Information Usage",
+      "details": "We use your information to provide services, process payments, send updates, and improve our service."
+    },
+    "item3": {
+      "title": "Information Sharing",
+      "details": "We do not sell, trade, or rent your personal information to third parties, except as described in this policy."
+    },
+    "item4": {
+      "title": "Data Protection",
+      "details": "We take reasonable security measures to protect your personal information from unauthorized access, alteration, or disclosure."
+    },
+    "item5": {
+      "title": "Your Rights",
+      "details": "You have the right to access, correct, or delete your personal information. Contact us to do so."
+    },
+    "item6": {
+      "title": "Policy Changes",
+      "details": "We may update this policy from time to time. We'll notify you of any changes via email or our website."
+    }
   }
 }
