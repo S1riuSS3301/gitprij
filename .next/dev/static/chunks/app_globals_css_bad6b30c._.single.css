@@ -2284,16 +2284,6 @@
     }
   }
 
-  .border-secondary\/25 {
-    border-color: var(--secondary);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-secondary\/25 {
-      border-color: color-mix(in oklab, var(--secondary) 25%, transparent);
-    }
-  }
-
   .border-sidebar-border {
     border-color: var(--sidebar-border);
   }
@@ -2517,6 +2507,10 @@
     background-color: var(--foreground);
   }
 
+  .bg-gray-500 {
+    background-color: var(--color-gray-500);
+  }
+
   .bg-gray-500\/20 {
     background-color: #6a728233;
   }
@@ -2699,16 +2693,6 @@
     }
   }
 
-  .bg-secondary\/30 {
-    background-color: var(--secondary);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-secondary\/30 {
-      background-color: color-mix(in oklab, var(--secondary) 30%, transparent);
-    }
-  }
-
   .bg-sidebar {
     background-color: var(--sidebar);
   }
@@ -2818,20 +2802,6 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
-  .from-primary\/15 {
-    --tw-gradient-from: var(--primary);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .from-primary\/15 {
-      --tw-gradient-from: color-mix(in oklab, var(--primary) 15%, transparent);
-    }
-  }
-
-  .from-primary\/15 {
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
   .from-primary\/30 {
     --tw-gradient-from: var(--primary);
   }
@@ -2872,20 +2842,6 @@
   }
 
   .to-accent\/10 {
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .to-accent\/15 {
-    --tw-gradient-to: var(--accent);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .to-accent\/15 {
-      --tw-gradient-to: color-mix(in oklab, var(--accent) 15%, transparent);
-    }
-  }
-
-  .to-accent\/15 {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 

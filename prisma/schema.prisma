@@ -58,6 +58,7 @@ model ServerPlan {
   bandwidth  Int
   price      Float
   popular    Boolean  @default(false)
+  hidden     Boolean  @default(false)
   description String?
 
   // Relations

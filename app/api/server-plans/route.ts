@@ -4,7 +4,13 @@ import { getUser } from "@/lib/auth-utils"
 
 export async function GET() {
   try {
-    const plans = await db.serverPlan.findMany()
+    const user = await getUser()
+    const isAdmin = user && user.role === "admin"
+
+    // Only show hidden plans to admins, filter out hidden for regular users
+    const where = isAdmin ? {} : { hidden: false }
+
+    const plans = await db.serverPlan.findMany({ where })
     return NextResponse.json(plans)
   } catch (error) {
     console.error("[v0] Error fetching server plans:", error)

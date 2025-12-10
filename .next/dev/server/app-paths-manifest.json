@@ -1,17 +1,6 @@
 {
-  "/[locale]/dashboard/billing/page": "app/[locale]/dashboard/billing/page.js",
-  "/[locale]/dashboard/page": "app/[locale]/dashboard/page.js",
-  "/[locale]/dashboard/referrals/page": "app/[locale]/dashboard/referrals/page.js",
-  "/[locale]/dashboard/servers/page": "app/[locale]/dashboard/servers/page.js",
-  "/[locale]/dashboard/services/page": "app/[locale]/dashboard/services/page.js",
-  "/[locale]/dashboard/support/page": "app/[locale]/dashboard/support/page.js",
   "/[locale]/page": "app/[locale]/page.js",
-  "/api/config/payments/route": "app/api/config/payments/route.js",
-  "/api/orders/route": "app/api/orders/route.js",
   "/api/profile/route": "app/api/profile/route.js",
-  "/api/referrals/route": "app/api/referrals/route.js",
   "/api/server-plans/route": "app/api/server-plans/route.js",
-  "/api/support/route": "app/api/support/route.js",
-  "/api/transactions/route": "app/api/transactions/route.js",
   "/api/user/route": "app/api/user/route.js"
 }

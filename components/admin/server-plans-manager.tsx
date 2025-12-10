@@ -20,6 +20,7 @@ interface ServerPlan {
   bandwidth: number
   price: number
   popular: boolean
+  hidden: boolean
   description: string | null
 }
 
@@ -64,6 +65,7 @@ export function ServerPlansManager() {
       bandwidth: 1000,
       price: 500,
       popular: false,
+      hidden: false,
       description: null,
     })
     setIsDialogOpen(true)
@@ -103,6 +105,23 @@ export function ServerPlansManager() {
       alert("Ошибка при сохранении плана")
     } finally {
       setIsSaving(false)
+    }
+  }
+
+  const handleToggleHidden = async (id: string, hidden: boolean) => {
+    try {
+      const response = await fetch(`/api/server-plans/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ hidden }),
+      })
+
+      if (!response.ok) throw new Error("Failed to toggle plan visibility")
+
+      await loadPlans()
+    } catch (error) {
+      console.error("[v0] Error toggling plan visibility:", error)
+      alert("Ошибка при изменении видимости плана")
     }
   }
 
@@ -148,10 +167,15 @@ export function ServerPlansManager() {
                 <h3 className="text-xl font-bold text-foreground">{plan.nameRu}</h3>
                 <p className="text-sm text-muted-foreground">{plan.name}</p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2">
                 {plan.popular && (
                   <Badge variant="default" className="bg-primary">
                     Популярный
+                  </Badge>
+                )}
+                {plan.hidden && (
+                  <Badge variant="secondary" className="bg-gray-500 text-white">
+                    Скрытый
                   </Badge>
                 )}
               </div>
@@ -185,6 +209,9 @@ export function ServerPlansManager() {
               <Button onClick={() => handleEdit(plan)} variant="outline" className="flex-1 gap-2">
                 <Pencil className="w-4 h-4" />
                 Редактировать
+              </Button>
+              <Button onClick={() => handleToggleHidden(plan.id, !plan.hidden)} variant="outline" size="icon" className={`text-${plan.hidden ? 'green' : 'yellow'}-500`}>
+                <Trash2 className="w-4 h-4" /> {/* Reuse for hide, maybe Eye icon later */}
               </Button>
               <Button onClick={() => handleDelete(plan.id)} variant="outline" size="icon" className="text-destructive">
                 <Trash2 className="w-4 h-4" />
@@ -297,6 +324,15 @@ export function ServerPlansManager() {
                   id="popular"
                   checked={editingPlan.popular}
                   onCheckedChange={(checked) => setEditingPlan({ ...editingPlan, popular: checked })}
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <Label htmlFor="hidden">Скрытый тариф</Label>
+                <Switch
+                  id="hidden"
+                  checked={editingPlan.hidden}
+                  onCheckedChange={(checked) => setEditingPlan({ ...editingPlan, hidden: checked })}
                 />
               </div>
 

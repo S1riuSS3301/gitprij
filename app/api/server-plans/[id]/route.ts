@@ -10,11 +10,24 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     }
 
     const body = await request.json()
-    const { name, nameRu, cpu, ram, storage, bandwidth, price, popular, description } = body
+    const { name, nameRu, cpu, ram, storage, bandwidth, price, popular, hidden, description } = body
+
+    // Build update data object, only include defined fields
+    const updateData: any = {}
+    if (name !== undefined) updateData.name = name
+    if (nameRu !== undefined) updateData.nameRu = nameRu
+    if (cpu !== undefined) updateData.cpu = cpu
+    if (ram !== undefined) updateData.ram = ram
+    if (storage !== undefined) updateData.storage = storage
+    if (bandwidth !== undefined) updateData.bandwidth = bandwidth
+    if (price !== undefined) updateData.price = price
+    if (popular !== undefined) updateData.popular = popular
+    if (hidden !== undefined) updateData.hidden = hidden
+    if (description !== undefined) updateData.description = description
 
     const updated = await db.serverPlan.update({
       where: { id: params.id },
-      data: { name, nameRu, cpu, ram, storage, bandwidth, price, popular, description },
+      data: updateData,
     })
 
     if (!updated) {

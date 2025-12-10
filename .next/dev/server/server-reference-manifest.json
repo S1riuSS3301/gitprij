@@ -2,42 +2,6 @@
   "node": {
     "60e8f0b7e21b6bbbad7922de001eaf79883b32971e": {
       "workers": {
-        "app/[locale]/dashboard/billing/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/billing/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/referrals/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/servers/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/servers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/services/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/services/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/support/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signIn",
-          "filename": "lib/actions/auth.ts"
-        },
         "app/[locale]/page": {
           "moduleId": "[project]/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -46,12 +10,6 @@
         }
       },
       "layer": {
-        "app/[locale]/dashboard/billing/page": "action-browser",
-        "app/[locale]/dashboard/page": "action-browser",
-        "app/[locale]/dashboard/referrals/page": "action-browser",
-        "app/[locale]/dashboard/servers/page": "action-browser",
-        "app/[locale]/dashboard/services/page": "action-browser",
-        "app/[locale]/dashboard/support/page": "action-browser",
         "app/[locale]/page": "action-browser"
       },
       "filename": "lib/actions/auth.ts",
@@ -59,42 +17,6 @@
     },
     "008ff62aa6bf6c8cbb7222e7c12c009d3713f678af": {
       "workers": {
-        "app/[locale]/dashboard/billing/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/billing/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/referrals/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/servers/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/servers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/services/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/services/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/support/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signOut",
-          "filename": "lib/actions/auth.ts"
-        },
         "app/[locale]/page": {
           "moduleId": "[project]/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -103,12 +25,6 @@
         }
       },
       "layer": {
-        "app/[locale]/dashboard/billing/page": "action-browser",
-        "app/[locale]/dashboard/page": "action-browser",
-        "app/[locale]/dashboard/referrals/page": "action-browser",
-        "app/[locale]/dashboard/servers/page": "action-browser",
-        "app/[locale]/dashboard/services/page": "action-browser",
-        "app/[locale]/dashboard/support/page": "action-browser",
         "app/[locale]/page": "action-browser"
       },
       "filename": "lib/actions/auth.ts",
@@ -116,42 +32,6 @@
     },
     "785c45f17123f8497ecb33c7dc2eaed1e528347ce9": {
       "workers": {
-        "app/[locale]/dashboard/billing/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/billing/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/referrals/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/referrals/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/servers/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/servers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/services/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/services/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/[locale]/dashboard/support/page": {
-          "moduleId": "[project]/.next-internal/server/app/[locale]/dashboard/support/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "signUp",
-          "filename": "lib/actions/auth.ts"
-        },
         "app/[locale]/page": {
           "moduleId": "[project]/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -160,12 +40,6 @@
         }
       },
       "layer": {
-        "app/[locale]/dashboard/billing/page": "action-browser",
-        "app/[locale]/dashboard/page": "action-browser",
-        "app/[locale]/dashboard/referrals/page": "action-browser",
-        "app/[locale]/dashboard/servers/page": "action-browser",
-        "app/[locale]/dashboard/services/page": "action-browser",
-        "app/[locale]/dashboard/support/page": "action-browser",
         "app/[locale]/page": "action-browser"
       },
       "filename": "lib/actions/auth.ts",
