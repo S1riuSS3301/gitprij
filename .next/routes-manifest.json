@@ -53,12 +53,204 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/[locale]/admin",
+      "regex": "^/([^/]+?)/admin(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/analytics",
+      "regex": "^/([^/]+?)/admin/analytics(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/analytics(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/notifications",
+      "regex": "^/([^/]+?)/admin/notifications(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/notifications(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/payments",
+      "regex": "^/([^/]+?)/admin/payments(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/payments(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/promo-codes",
+      "regex": "^/([^/]+?)/admin/promo\\-codes(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/promo\\-codes(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/referrals",
+      "regex": "^/([^/]+?)/admin/referrals(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/referrals(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/servers",
+      "regex": "^/([^/]+?)/admin/servers(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/servers(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/settings",
+      "regex": "^/([^/]+?)/admin/settings(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/users",
+      "regex": "^/([^/]+?)/admin/users(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/users(?:/)?$"
+    },
+    {
+      "page": "/[locale]/auth/check-email",
+      "regex": "^/([^/]+?)/auth/check\\-email(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/auth/check\\-email(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard",
+      "regex": "^/([^/]+?)/dashboard(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/billing",
+      "regex": "^/([^/]+?)/dashboard/billing(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/billing(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/buying",
+      "regex": "^/([^/]+?)/dashboard/buying(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/buying(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/profile",
+      "regex": "^/([^/]+?)/dashboard/profile(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/referrals",
+      "regex": "^/([^/]+?)/dashboard/referrals(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/referrals(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/servers",
+      "regex": "^/([^/]+?)/dashboard/servers(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/servers(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/services",
+      "regex": "^/([^/]+?)/dashboard/services(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/services(?:/)?$"
+    },
+    {
+      "page": "/[locale]/dashboard/support",
+      "regex": "^/([^/]+?)/dashboard/support(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/dashboard/support(?:/)?$"
+    },
+    {
       "page": "/[locale]/faq",
       "regex": "^/([^/]+?)/faq(?:/)?$",
       "routeKeys": {
         "nxtPlocale": "nxtPlocale"
       },
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/faq(?:/)?$"
+    },
+    {
+      "page": "/[locale]/forgot-password",
+      "regex": "^/([^/]+?)/forgot\\-password(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/forgot\\-password(?:/)?$"
+    },
+    {
+      "page": "/[locale]/login",
+      "regex": "^/([^/]+?)/login(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/login(?:/)?$"
+    },
+    {
+      "page": "/[locale]/privacy",
+      "regex": "^/([^/]+?)/privacy(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/privacy(?:/)?$"
+    },
+    {
+      "page": "/[locale]/register",
+      "regex": "^/([^/]+?)/register(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/register(?:/)?$"
+    },
+    {
+      "page": "/[locale]/reset-password",
+      "regex": "^/([^/]+?)/reset\\-password(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/reset\\-password(?:/)?$"
+    },
+    {
+      "page": "/[locale]/terms",
+      "regex": "^/([^/]+?)/terms(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/terms(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -73,60 +265,6 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/admin",
-      "regex": "^/admin(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin(?:/)?$"
-    },
-    {
-      "page": "/admin/analytics",
-      "regex": "^/admin/analytics(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/analytics(?:/)?$"
-    },
-    {
-      "page": "/admin/notifications",
-      "regex": "^/admin/notifications(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/notifications(?:/)?$"
-    },
-    {
-      "page": "/admin/payments",
-      "regex": "^/admin/payments(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/payments(?:/)?$"
-    },
-    {
-      "page": "/admin/promo-codes",
-      "regex": "^/admin/promo\\-codes(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/promo\\-codes(?:/)?$"
-    },
-    {
-      "page": "/admin/referrals",
-      "regex": "^/admin/referrals(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/referrals(?:/)?$"
-    },
-    {
-      "page": "/admin/servers",
-      "regex": "^/admin/servers(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/servers(?:/)?$"
-    },
-    {
-      "page": "/admin/settings",
-      "regex": "^/admin/settings(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/settings(?:/)?$"
-    },
-    {
-      "page": "/admin/users",
-      "regex": "^/admin/users(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/admin/users(?:/)?$"
     },
     {
       "page": "/api/admin/notifications",
@@ -349,96 +487,6 @@
       "regex": "^/api/vmmanager(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/vmmanager(?:/)?$"
-    },
-    {
-      "page": "/auth/check-email",
-      "regex": "^/auth/check\\-email(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/auth/check\\-email(?:/)?$"
-    },
-    {
-      "page": "/dashboard",
-      "regex": "^/dashboard(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard(?:/)?$"
-    },
-    {
-      "page": "/dashboard/billing",
-      "regex": "^/dashboard/billing(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/billing(?:/)?$"
-    },
-    {
-      "page": "/dashboard/buying",
-      "regex": "^/dashboard/buying(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/buying(?:/)?$"
-    },
-    {
-      "page": "/dashboard/profile",
-      "regex": "^/dashboard/profile(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/profile(?:/)?$"
-    },
-    {
-      "page": "/dashboard/referrals",
-      "regex": "^/dashboard/referrals(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/referrals(?:/)?$"
-    },
-    {
-      "page": "/dashboard/servers",
-      "regex": "^/dashboard/servers(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/servers(?:/)?$"
-    },
-    {
-      "page": "/dashboard/services",
-      "regex": "^/dashboard/services(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/services(?:/)?$"
-    },
-    {
-      "page": "/dashboard/support",
-      "regex": "^/dashboard/support(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/dashboard/support(?:/)?$"
-    },
-    {
-      "page": "/forgot-password",
-      "regex": "^/forgot\\-password(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/forgot\\-password(?:/)?$"
-    },
-    {
-      "page": "/login",
-      "regex": "^/login(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/login(?:/)?$"
-    },
-    {
-      "page": "/privacy",
-      "regex": "^/privacy(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/privacy(?:/)?$"
-    },
-    {
-      "page": "/register",
-      "regex": "^/register(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/register(?:/)?$"
-    },
-    {
-      "page": "/reset-password",
-      "regex": "^/reset\\-password(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/reset\\-password(?:/)?$"
-    },
-    {
-      "page": "/terms",
-      "regex": "^/terms(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/terms(?:/)?$"
     }
   ],
   "dataRoutes": [],

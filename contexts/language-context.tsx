@@ -215,6 +215,12 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.privacyPolicy": "Политика конфиденциальности",
+
+    // Activity
+    "activity.title": "Недавняя активность",
+    "activity.noActivity": "Нет активности",
+    "activity.login": "Вход",
+    "activity.minutesAgo": "минут назад",
   },
 
   // ================= English =================
@@ -403,6 +409,12 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.privacyPolicy": "Privacy Policy",
+
+    // Activity
+    "activity.title": "Recent Activity",
+    "activity.noActivity": "No activity",
+    "activity.login": "Login",
+    "activity.minutesAgo": "minutes ago",
   },
 }
 

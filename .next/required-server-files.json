@@ -290,6 +290,9 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
+      "resolveAlias": {
+        "next-intl/config": "./i18n/request.ts"
+      },
       "root": "/root/gitprij"
     },
     "distDirRoot": ".next"
